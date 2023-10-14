@@ -5,10 +5,13 @@
     "rootDir": "./src",
     "target": "ES6",
     "sourceMap": true,
-    "moduleResolution": "Node"
+    "module": "CommonJS", // Change the module system to CommonJS
+    "moduleResolution": "Node",
+    "esModuleInterop": true, // This can help with mixing ES6 and CommonJS imports/exports
+    "strict": true // (Optional) Enables a stricter set of type checking rules; recommended for library development
   },
   "include": [
-    "./src/**/*.ts",
+    "./src/**/*.ts"
   ],
   "exclude": [
     "node_modules"
