@@ -5,4 +5,4 @@ export { OfferBundleData } from './offer-bundle';
 export { PSAData } from './psa';
 
 // addenda
-export { Addenda17Data } from "./addenda";
+export { Addenda17Data, SellerDisclosureDataSchema } from "./addenda";
