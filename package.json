@@ -1,12 +1,11 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.5",
   "name": "@markenkema/revzn-types",
   "types": "./types/index.d.ts",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "pnpm run build",
-    "publish": "pnpm publish"
+    "prepublishOnly": "pnpm build"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
