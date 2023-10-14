@@ -1,0 +1,8 @@
+{
+  "version": "1.0.0",
+  "name": "@markenkema/revzn-types",
+  "types": "./types/index.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
