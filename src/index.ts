@@ -1,12 +1,18 @@
-export { AgentData, AgentDocument, AgentSchema } from "./agent";
-export { BuyerData, BuyerSchema, BuyerDocument } from "./buyer";
-export { ListingData, ListingSchema, ListingDocument } from "./listing";
+export { AgentData, AgentDocument, AgentSchema, AgentModel } from "./agent";
+export { BuyerData, BuyerSchema, BuyerDocument, BuyerModel } from "./buyer";
+export {
+  ListingData,
+  ListingSchema,
+  ListingDocument,
+  ListingModel,
+} from "./listing";
 export {
   OfferBundleData,
   OfferBundleSchema,
   OfferBundleDocument,
+  OfferBundleModel,
 } from "./offer-bundle";
-export { PSAData, PSADocument, PSASchema } from "./psa";
+export { PSAData, PSADocument, PSASchema, PSAModel } from "./psa";
 export {
   FormCommonProps,
   RawData,

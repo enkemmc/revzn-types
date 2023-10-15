@@ -132,4 +132,9 @@ export const OfferBundleSchema = new mongoose.Schema({
   },
 });
 
+export const OfferBundleModel = mongoose.model<OfferBundleData>(
+  "OfferBundle",
+  OfferBundleSchema
+);
+
 export type OfferBundleDocument = OfferBundleData & mongoose.Document;

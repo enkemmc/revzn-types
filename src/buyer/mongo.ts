@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export type BuyerData = {
+type BuyerData = {
   id: string;
   version: number;
   /** Each version of their offer that a Buyer has sent. */
@@ -10,7 +10,7 @@ export type BuyerData = {
   listingKey: string;
 };
 
-export const BuyerSchema = new mongoose.Schema({
+const BuyerSchema = new mongoose.Schema({
   name: { type: String, required: true },
   listingKey: { type: String, required: true },
   version: { type: Number, default: 1 },
@@ -22,4 +22,7 @@ export const BuyerSchema = new mongoose.Schema({
   ],
 });
 
-export type BuyerDocument = BuyerData & mongoose.Document;
+type BuyerDocument = BuyerData & mongoose.Document;
+const BuyerModel = mongoose.model<BuyerData>("Buyer", BuyerSchema);
+
+export { BuyerModel, BuyerData, BuyerSchema, BuyerDocument };

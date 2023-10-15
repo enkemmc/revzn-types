@@ -17,4 +17,5 @@ export const ListingSchema = new mongoose.Schema({
   ],
 });
 
+export const ListingModel = mongoose.model<ListingData>("Listing", ListingSchema);
 export type ListingDocument = ListingData & mongoose.Document;

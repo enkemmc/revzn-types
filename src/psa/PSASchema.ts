@@ -1,4 +1,5 @@
-import { Schema } from "mongoose";
+import mongoose, { Schema, Document } from "mongoose";
+import { PSAData } from "./PSAData";
 
 export const PSASchema = new Schema({
   pdfPath: { type: String, required: true },
@@ -104,3 +105,6 @@ export const PSASchema = new Schema({
   buyerBrokeragePayOffered: { type: Boolean, default: false },
   buyerBrokerageOther: { type: Boolean, default: false },
 });
+
+export type PSADocument = PSAData & Document;
+export const PSAModel = mongoose.model<PSAData>("PSA", PSASchema);

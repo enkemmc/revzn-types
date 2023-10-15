@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
-export type AgentData = {
+type AgentData = {
   id?: string;
   listings: string[];
   name: string;
   email: string;
 };
 
-export const AgentSchema = new mongoose.Schema(
+const AgentSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -61,7 +61,10 @@ export const AgentSchema = new mongoose.Schema(
       },
     ],
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
-export type AgentDocument = AgentData & mongoose.Document;
+type AgentDocument = AgentData & mongoose.Document;
+const AgentModel = mongoose.model<AgentData>("Agent", AgentSchema);
+
+export { AgentData, AgentDocument, AgentSchema, AgentModel };
