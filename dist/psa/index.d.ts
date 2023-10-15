@@ -1,2 +1,2 @@
-export { PSAData, PSADocument } from "./PSAData";
+export { PSAData, PSADocument, AddendaForms, AddendaFormTuple, AddendaFormType, } from "./PSAData";
 export { PSASchema, PSAModel } from "./PSASchema";

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 export type OfferBundleData = {
-  userid: string;
+  userId: string;
   id?: string;
   psa: string;
   addenda: Record<string, any>;

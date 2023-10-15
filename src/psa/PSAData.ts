@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 /** Represents a parsed PSA document. */
 export type PSAData = {
+  pdfPath: string;
   date: string;
   mlsNumber: string;
   offerExpirationDate: string;
