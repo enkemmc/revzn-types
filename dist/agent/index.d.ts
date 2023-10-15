@@ -1,1 +1,1 @@
-export { AgentData, AgentDocument, AgentSchema } from "./AgentData";
+export { AgentData, AgentDocument, AgentSchema, AgentModel } from "./mongo";

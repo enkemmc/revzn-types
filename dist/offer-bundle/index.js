@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.OfferBundleSchema = void 0;
+exports.OfferBundleModel = exports.OfferBundleSchema = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 exports.OfferBundleSchema = new mongoose_1.default.Schema({
     userId: {
@@ -128,4 +128,5 @@ exports.OfferBundleSchema = new mongoose_1.default.Schema({
         },
     },
 });
+exports.OfferBundleModel = mongoose_1.default.model("OfferBundle", exports.OfferBundleSchema);
 //# sourceMappingURL=index.js.map

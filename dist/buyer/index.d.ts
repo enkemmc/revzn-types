@@ -1,1 +1,1 @@
-export { BuyerData, BuyerDocument, BuyerSchema } from "./BuyerData";
+export { BuyerData, BuyerSchema, BuyerDocument, BuyerModel } from "./mongo";

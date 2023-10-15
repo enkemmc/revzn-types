@@ -1,16 +1,21 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MultipleBrokersSchema = exports.MultipleBrokersFieldMap = exports.AgencyDisclosureFieldMap = exports.Addenda42Model = exports.AgencyDisclosureSchema = exports.EscalationFieldMap = exports.Addenda35EModel = exports.EscalationSchema = exports.InspectionFieldMap = exports.Addenda35Model = exports.InspectionDataSchema = exports.Addenda22TModel = exports.TitleDataSchema = exports.TitleFieldMap = exports.Addenda22KModel = exports.UtilitySchema = exports.LeadFieldMap = exports.Addenda22JModel = exports.LeadDataSchema = exports.FIRPTA = exports.Addenda22EModel = exports.FIRPTADataSchema = exports.OptionalClausesFieldMap = exports.Addenda22DModel = exports.OptionalClausesDataSchema = exports.DownPaymentFieldMap = exports.Addenda22ADModel = exports.DownpaymentDataSchema = exports.Addenda22ASchema = exports.FinancingContingency = exports.LoanApplication = exports.SellerDisclosureDataSchema = exports.PSASchema = exports.OfferBundleSchema = exports.ListingSchema = exports.BuyerSchema = exports.AgentSchema = void 0;
+exports.MultipleBrokersSchema = exports.MultipleBrokersFieldMap = exports.AgencyDisclosureFieldMap = exports.Addenda42Model = exports.AgencyDisclosureSchema = exports.EscalationFieldMap = exports.Addenda35EModel = exports.EscalationSchema = exports.InspectionFieldMap = exports.Addenda35Model = exports.InspectionDataSchema = exports.Addenda22TModel = exports.TitleDataSchema = exports.TitleFieldMap = exports.Addenda22KModel = exports.UtilitySchema = exports.LeadFieldMap = exports.Addenda22JModel = exports.LeadDataSchema = exports.FIRPTA = exports.Addenda22EModel = exports.FIRPTADataSchema = exports.OptionalClausesFieldMap = exports.Addenda22DModel = exports.OptionalClausesDataSchema = exports.DownPaymentFieldMap = exports.Addenda22ADModel = exports.DownpaymentDataSchema = exports.Addenda22ASchema = exports.FinancingContingency = exports.LoanApplication = exports.SellerDisclosureDataSchema = exports.PSAModel = exports.PSASchema = exports.OfferBundleModel = exports.OfferBundleSchema = exports.ListingModel = exports.ListingSchema = exports.BuyerModel = exports.BuyerSchema = exports.AgentModel = exports.AgentSchema = void 0;
 var agent_1 = require("./agent");
 Object.defineProperty(exports, "AgentSchema", { enumerable: true, get: function () { return agent_1.AgentSchema; } });
+Object.defineProperty(exports, "AgentModel", { enumerable: true, get: function () { return agent_1.AgentModel; } });
 var buyer_1 = require("./buyer");
 Object.defineProperty(exports, "BuyerSchema", { enumerable: true, get: function () { return buyer_1.BuyerSchema; } });
+Object.defineProperty(exports, "BuyerModel", { enumerable: true, get: function () { return buyer_1.BuyerModel; } });
 var listing_1 = require("./listing");
 Object.defineProperty(exports, "ListingSchema", { enumerable: true, get: function () { return listing_1.ListingSchema; } });
+Object.defineProperty(exports, "ListingModel", { enumerable: true, get: function () { return listing_1.ListingModel; } });
 var offer_bundle_1 = require("./offer-bundle");
 Object.defineProperty(exports, "OfferBundleSchema", { enumerable: true, get: function () { return offer_bundle_1.OfferBundleSchema; } });
+Object.defineProperty(exports, "OfferBundleModel", { enumerable: true, get: function () { return offer_bundle_1.OfferBundleModel; } });
 var psa_1 = require("./psa");
 Object.defineProperty(exports, "PSASchema", { enumerable: true, get: function () { return psa_1.PSASchema; } });
+Object.defineProperty(exports, "PSAModel", { enumerable: true, get: function () { return psa_1.PSAModel; } });
 // addenda
 var addenda_1 = require("./addenda");
 Object.defineProperty(exports, "SellerDisclosureDataSchema", { enumerable: true, get: function () { return addenda_1.SellerDisclosureDataSchema; } });

@@ -90,4 +90,7 @@ export declare const OfferBundleSchema: mongoose.Schema<any, mongoose.Model<any,
 }> & {
     _id: mongoose.Types.ObjectId;
 }>;
+export declare const OfferBundleModel: mongoose.Model<OfferBundleData, {}, {}, {}, mongoose.Document<unknown, {}, OfferBundleData> & OfferBundleData & {
+    _id: mongoose.Types.ObjectId;
+}, any>;
 export type OfferBundleDocument = OfferBundleData & mongoose.Document;

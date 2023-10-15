@@ -19,4 +19,7 @@ export declare const ListingSchema: mongoose.Schema<any, mongoose.Model<any, any
 }> & {
     _id: mongoose.Types.ObjectId;
 }>;
+export declare const ListingModel: mongoose.Model<ListingData, {}, {}, {}, mongoose.Document<unknown, {}, ListingData> & ListingData & {
+    _id: mongoose.Types.ObjectId;
+}, any>;
 export type ListingDocument = ListingData & mongoose.Document;
