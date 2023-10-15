@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { AgencyDisclosureData } from "../../../types/azure/agency-disclosure/parsed";
+import { AgencyDisclosureData } from "./parsed";
 import { FormCommonProps } from "../../common";
 declare const AgencyDisclosureSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
     pdfPath: string;
@@ -53,5 +53,7 @@ declare const AgencyDisclosureSchema: mongoose.Schema<any, mongoose.Model<any, a
     _id: mongoose.Types.ObjectId;
 }>;
 type AgencyDisclosureDocument = AgencyDisclosureData & mongoose.Document & FormCommonProps;
-declare const Addenda42Model: mongoose.Model<any, unknown, unknown, unknown, any, any>;
+declare const Addenda42Model: mongoose.Model<AgencyDisclosureDocument, {}, {}, {}, mongoose.Document<unknown, {}, AgencyDisclosureDocument> & AgencyDisclosureData & mongoose.Document<any, any, any> & FormCommonProps & {
+    _id: mongoose.Types.ObjectId;
+}, any>;
 export { AgencyDisclosureSchema, AgencyDisclosureDocument, Addenda42Model };
