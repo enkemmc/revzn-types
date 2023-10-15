@@ -1,4 +1,7 @@
-export var AddendaFormType;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddendaFormType = void 0;
+var AddendaFormType;
 (function (AddendaFormType) {
     AddendaFormType["Form22K"] = "22K";
     /** Lead paint */
@@ -24,5 +27,5 @@ export var AddendaFormType;
     AddendaFormType["Form22T"] = "22T";
     AddendaFormType["Form22Y"] = "22Y";
     AddendaFormType["Form22AD"] = "22AD";
-})(AddendaFormType || (AddendaFormType = {}));
+})(AddendaFormType || (exports.AddendaFormType = AddendaFormType = {}));
 //# sourceMappingURL=PSAData.js.map

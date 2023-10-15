@@ -1,1 +1,1 @@
-export { AgentData } from "./AgentData";
+export { AgentData, AgentDocument, AgentSchema } from "./AgentData";

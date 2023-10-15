@@ -1,3 +1,5 @@
+import mongoose from "mongoose";
+
 /** Represents a parsed PSA document. */
 export type PSAData = {
   date: string;
@@ -163,3 +165,6 @@ export enum AddendaFormType {
   "Form22Y" = "22Y",
   "Form22AD" = "22AD",
 }
+
+export type PSADocument = PSAData & mongoose.Document;
+

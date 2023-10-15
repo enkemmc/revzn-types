@@ -1,5 +1,8 @@
-import { Schema } from 'mongoose';
-export const SellerDisclosureDataSchema = new Schema({
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SellerDisclosureDataSchema = void 0;
+const mongoose_1 = require("mongoose");
+exports.SellerDisclosureDataSchema = new mongoose_1.Schema({
     titleAuthorityToSell: Boolean,
     titleFirstRightOfRefusal: Boolean,
     titleOption: Boolean,

@@ -1,0 +1,57 @@
+import mongoose from "mongoose";
+import { AgencyDisclosureData } from "../../../types/azure/agency-disclosure/parsed";
+import { FormCommonProps } from "../../common";
+declare const AgencyDisclosureSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
+    pdfPath: string;
+    brokerrepresentsType: string;
+    brokerrepresentsName: string;
+    undersigned1Type: string;
+    undersigned1Sig: string;
+    brokerSig: string;
+    undersigned3Sig: string;
+    brokerFirmAssumedname: string;
+    undersigned2Type: string;
+    brokerName: string;
+    undersigned4Type: string;
+    undersigned2Sig: string;
+    undersigned4Sig: string;
+    undersigned3Type: string;
+    brokerFirmName: string;
+}, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
+    pdfPath: string;
+    brokerrepresentsType: string;
+    brokerrepresentsName: string;
+    undersigned1Type: string;
+    undersigned1Sig: string;
+    brokerSig: string;
+    undersigned3Sig: string;
+    brokerFirmAssumedname: string;
+    undersigned2Type: string;
+    brokerName: string;
+    undersigned4Type: string;
+    undersigned2Sig: string;
+    undersigned4Sig: string;
+    undersigned3Type: string;
+    brokerFirmName: string;
+}>> & mongoose.FlatRecord<{
+    pdfPath: string;
+    brokerrepresentsType: string;
+    brokerrepresentsName: string;
+    undersigned1Type: string;
+    undersigned1Sig: string;
+    brokerSig: string;
+    undersigned3Sig: string;
+    brokerFirmAssumedname: string;
+    undersigned2Type: string;
+    brokerName: string;
+    undersigned4Type: string;
+    undersigned2Sig: string;
+    undersigned4Sig: string;
+    undersigned3Type: string;
+    brokerFirmName: string;
+}> & {
+    _id: mongoose.Types.ObjectId;
+}>;
+type AgencyDisclosureDocument = AgencyDisclosureData & mongoose.Document & FormCommonProps;
+declare const Addenda42Model: mongoose.Model<any, unknown, unknown, unknown, any, any>;
+export { AgencyDisclosureSchema, AgencyDisclosureDocument, Addenda42Model };
