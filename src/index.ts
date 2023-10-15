@@ -12,7 +12,15 @@ export {
   OfferBundleDocument,
   OfferBundleModel,
 } from "./offer-bundle";
-export { PSAData, PSADocument, PSASchema, PSAModel } from "./psa";
+export {
+  PSAData,
+  PSADocument,
+  AddendaForms,
+  AddendaFormTuple,
+  AddendaFormType,
+  PSASchema,
+  PSAModel,
+} from "./psa";
 export {
   FormCommonProps,
   RawData,
