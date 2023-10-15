@@ -2,9 +2,18 @@ import mongoose from "mongoose";
 
 type AgentData = {
   id?: string;
-  listings: string[];
-  name: string;
+  name?: string | null;
   email: string;
+  password?: string;
+  image?: string | null;
+  primaryColor?: string;
+  secondaryColor?: string;
+  logoImage?: string | null;
+  isDeleted?: boolean;
+  socialId?: string;
+  loginType?: string;
+  token?: string;
+  listings: string[];
 };
 
 const AgentSchema = new mongoose.Schema(
