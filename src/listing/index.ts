@@ -1,10 +1,10 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 export type ListingData = {
   id?: string;
   streetAddress: string;
   buyers: string[];
-}
+};
 
 export const ListingSchema = new mongoose.Schema({
   streetAddress: { type: String, required: true },

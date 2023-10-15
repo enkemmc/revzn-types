@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 export type OfferBundleData = {
     userid: string;
     id?: string;

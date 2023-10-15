@@ -1,4 +1,3 @@
-
 import { DeepPartial, Value } from "../../common";
 
 enum InspectionFieldMap {
@@ -22,7 +21,4 @@ type RawInspectionDocument = DeepPartial<{
   };
 }>;
 
-export {
-  InspectionFieldMap,
-  RawInspectionDocument
-}
+export { InspectionFieldMap, RawInspectionDocument };

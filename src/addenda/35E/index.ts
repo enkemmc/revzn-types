@@ -1,13 +1,5 @@
-export {
-  EscalationSchema,
-  EscalationDocument,
-  Addenda35EModel
-} from './mongo'
+export { EscalationSchema, EscalationDocument, Addenda35EModel } from "./mongo";
 
+export { EscalationFieldMap, EscalationData } from "./parsed";
 
-export {
-  EscalationFieldMap,
-  EscalationData
-} from './parsed'
-
-export { RawEscalationDocument } from './raw'
+export { RawEscalationDocument } from "./raw";

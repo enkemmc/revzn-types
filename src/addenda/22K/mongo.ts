@@ -44,5 +44,5 @@ export const UtilitySchema = new mongoose.Schema({
 export type UtilityDocument = UtilityData & mongoose.Document & FormCommonProps;
 export const Addenda22KModel = mongoose.model<UtilityDocument>(
   "Addenda22K",
-  UtilitySchema
+  UtilitySchema,
 );

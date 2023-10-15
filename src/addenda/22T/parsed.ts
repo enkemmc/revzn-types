@@ -3,4 +3,4 @@ export type TitleData = {
   titleSellerDaysFrom: string;
   titleFromBuyersReceipt: boolean;
   titleFromBuyersMutualAcceptance: boolean;
-}
+};

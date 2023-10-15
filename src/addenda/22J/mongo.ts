@@ -22,5 +22,5 @@ export const LeadDataSchema = new mongoose.Schema({
 export type Addenda22JDocument = Document & LeadData & FormCommonProps;
 export const Addenda22JModel = mongoose.model<Addenda22JDocument>(
   "Addenda22J",
-  LeadDataSchema
+  LeadDataSchema,
 );

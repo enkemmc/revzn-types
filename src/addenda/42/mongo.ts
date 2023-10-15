@@ -25,11 +25,7 @@ type AgencyDisclosureDocument = AgencyDisclosureData &
   FormCommonProps;
 const Addenda42Model = mongoose.model<AgencyDisclosureDocument>(
   "Addenda42",
-  AgencyDisclosureSchema
+  AgencyDisclosureSchema,
 );
 
-export {
-  AgencyDisclosureSchema,
-  AgencyDisclosureDocument,
-  Addenda42Model
-}
+export { AgencyDisclosureSchema, AgencyDisclosureDocument, Addenda42Model };

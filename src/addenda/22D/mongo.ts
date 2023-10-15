@@ -23,5 +23,5 @@ export type Addenda22DDocument = Document &
   FormCommonProps;
 export const Addenda22DModel = mongoose.model<Addenda22DDocument>(
   "Addenda22D",
-  OptionalClausesDataSchema
+  OptionalClausesDataSchema,
 );

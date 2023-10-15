@@ -34,10 +34,7 @@ type MultipleBrokersDocument = MultipleBrokersData &
   FormCommonProps;
 const Addenda42AModel = mongoose.model<MultipleBrokersDocument>(
   "Addenda42A",
-  MultipleBrokersSchema
+  MultipleBrokersSchema,
 );
 
-export {
-  MultipleBrokersSchema,
-  MultipleBrokersDocument, Addenda42AModel
-}
+export { MultipleBrokersSchema, MultipleBrokersDocument, Addenda42AModel };

@@ -44,7 +44,4 @@ type MultipleBrokersData = {
   addListingbroker2Mlslag: string;
 };
 
-export {
-  MultipleBrokersData,
-  MultipleBrokersFieldMap
-}
+export { MultipleBrokersData, MultipleBrokersFieldMap };

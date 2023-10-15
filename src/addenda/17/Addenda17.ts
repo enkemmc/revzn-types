@@ -1,5 +1,5 @@
 import { FormCommonProps } from "../../common";
-import { Document, Schema } from 'mongoose'
+import { Document, Schema } from "mongoose";
 
 /** Seller Disclosure data. */
 export type Addenda17Data = {
@@ -53,5 +53,3 @@ export const SellerDisclosureDataSchema = new Schema({
   sellerOccupyingNo: Boolean,
   sellerOccupyingYes: Boolean,
 });
-
-

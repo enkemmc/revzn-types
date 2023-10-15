@@ -8,7 +8,7 @@ export type BuyerData = {
   name: string;
   /** This is how we determine if a bundle is from a new buyer, or a new version of a bundle that has already been uploaded from the same buyer. */
   listingKey: string;
-}
+};
 
 export const BuyerSchema = new mongoose.Schema({
   name: { type: String, required: true },

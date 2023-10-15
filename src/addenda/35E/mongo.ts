@@ -77,15 +77,9 @@ const EscalationSchema = new mongoose.Schema({
   },
 });
 
-type EscalationDocument = EscalationData &
-  mongoose.Document &
-  FormCommonProps;
+type EscalationDocument = EscalationData & mongoose.Document & FormCommonProps;
 const Addenda35EModel = mongoose.model<EscalationDocument>(
   "Addenda35E",
-  EscalationSchema
-);
-export {
   EscalationSchema,
-  EscalationDocument,
-  Addenda35EModel
-}
+);
+export { EscalationSchema, EscalationDocument, Addenda35EModel };

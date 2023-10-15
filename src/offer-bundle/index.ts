@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 export type OfferBundleData = {
   userid: string;
@@ -6,7 +6,7 @@ export type OfferBundleData = {
   psa: string;
   addenda: Record<string, any>;
   pdfPath: string;
-}
+};
 
 export const OfferBundleSchema = new mongoose.Schema({
   userId: {
@@ -133,4 +133,3 @@ export const OfferBundleSchema = new mongoose.Schema({
 });
 
 export type OfferBundleDocument = OfferBundleData & mongoose.Document;
-

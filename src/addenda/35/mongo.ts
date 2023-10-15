@@ -20,11 +20,7 @@ const InspectionDataSchema = new mongoose.Schema({
 type Addenda35Document = Document & InspectionData & FormCommonProps;
 const Addenda35Model = mongoose.model<Addenda35Document>(
   "Addenda35",
-  InspectionDataSchema
+  InspectionDataSchema,
 );
 
-export {
-  InspectionDataSchema,
-  Addenda35Model,
-  Addenda35Document
-}
+export { InspectionDataSchema, Addenda35Model, Addenda35Document };

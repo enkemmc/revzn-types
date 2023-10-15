@@ -24,6 +24,5 @@ export const DownpaymentDataSchema = new mongoose.Schema({
 export type Addenda22ADDocument = Document & DownpaymentData & FormCommonProps;
 export const Addenda22ADModel = mongoose.model<Addenda22ADDocument>(
   "Addenda22AD",
-  DownpaymentDataSchema
+  DownpaymentDataSchema,
 );
-

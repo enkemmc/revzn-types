@@ -1,12 +1,9 @@
 export {
   AgencyDisclosureSchema,
   AgencyDisclosureDocument,
-  Addenda42Model
-} from './mongo'
+  Addenda42Model,
+} from "./mongo";
 
-export {
-  AgencyDisclosureData,
-  AgencyDisclosureFieldMap
-} from './parsed'
+export { AgencyDisclosureData, AgencyDisclosureFieldMap } from "./parsed";
 
-export { RawAgencyDisclosureDocument } from './raw'
+export { RawAgencyDisclosureDocument } from "./raw";

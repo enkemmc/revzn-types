@@ -1,6 +1,6 @@
 export type FormCommonProps = {
   pdfPath: string;
-}
+};
 
 export type RawData<T extends string = string, V = RowValue> = {
   properties: Record<T, V>;
@@ -25,11 +25,11 @@ export type DeepPartial<T> = {
 export type DeepNullable<T> = T extends null
   ? null
   : {
-    [P in keyof T]?: T[P] extends (infer U)[]
-    ? DeepNullable<U>[]
-    : T[P] extends ReadonlyArray<infer U>
-    ? ReadonlyArray<DeepNullable<U>>
-    : T[P] extends object
-    ? DeepNullable<T[P]>
-    : T[P] | null;
-  };
+      [P in keyof T]?: T[P] extends (infer U)[]
+        ? DeepNullable<U>[]
+        : T[P] extends ReadonlyArray<infer U>
+        ? ReadonlyArray<DeepNullable<U>>
+        : T[P] extends object
+        ? DeepNullable<T[P]>
+        : T[P] | null;
+    };

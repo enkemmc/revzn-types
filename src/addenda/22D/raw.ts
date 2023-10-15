@@ -21,4 +21,3 @@ export type RawOptionalClausesDocument = DeepPartial<{
     [key in OptionalClausesFieldMap]: Value;
   };
 }>;
-

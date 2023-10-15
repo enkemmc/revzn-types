@@ -32,7 +32,4 @@ type AgencyDisclosureData = {
   brokerFirmName: string;
 };
 
-export {
-  AgencyDisclosureData,
-  AgencyDisclosureFieldMap
-}
+export { AgencyDisclosureData, AgencyDisclosureFieldMap };

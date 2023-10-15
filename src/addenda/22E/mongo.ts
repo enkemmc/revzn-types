@@ -20,5 +20,5 @@ export const FIRPTADataSchema = new mongoose.Schema({
 export type Addenda22EDocument = Document & FIRPTAData & FormCommonProps;
 export const Addenda22EModel = mongoose.model<Addenda22EDocument>(
   "Addenda22E",
-  FIRPTADataSchema
+  FIRPTADataSchema,
 );

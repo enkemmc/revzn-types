@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 export type AgentData = {
   id?: string;
@@ -61,7 +61,7 @@ export const AgentSchema = new mongoose.Schema(
       },
     ],
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 export type AgentDocument = AgentData & mongoose.Document;

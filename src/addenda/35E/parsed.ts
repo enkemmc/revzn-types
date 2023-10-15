@@ -38,7 +38,4 @@ type EscalationData = {
   newpurchasepriceCompetingofferPluscredits: string;
 };
 
-export {
-  EscalationFieldMap,
-  EscalationData
-}
+export { EscalationFieldMap, EscalationData };
