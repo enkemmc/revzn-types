@@ -34,6 +34,11 @@ export const Addenda22ASchema = new mongoose.Schema({
   },
 });
 
+export const Addenda22AModel = mongoose.model<Addenda22ADocument>(
+  "Addenda22A",
+  Addenda22ASchema
+);
+
 export type Addenda22ADocument = IAddenda22A & mongoose.Document;
 
 export type FinancingData = {
