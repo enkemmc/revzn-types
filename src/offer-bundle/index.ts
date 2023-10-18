@@ -4,9 +4,16 @@ import { PSAData } from "../psa";
 import {
   Addenda17Data,
   AgencyDisclosureData,
+  DownpaymentData,
   EscalationData,
+  FIRPTAData,
+  FinancingData,
   InspectionData,
+  LeadData,
   MultipleBrokersData,
+  OptionalClausesData,
+  TitleData,
+  UtilityData,
 } from "../addenda";
 
 type temp = mongoose.InferSchemaType<typeof OfferBundleSchema>;
@@ -24,20 +31,22 @@ type DehydratedOfferBundleData = Omit<temp, "addenda" | "userId" | "psa"> & {
   pdfPath: string;
 };
 
-type AddendaToDataMap = {
-  "17": Addenda17Data;
-  "21": PSAData;
-  "27": object;
-  "28": object;
-  "34": object;
-  "35": InspectionData;
-  "35E": EscalationData;
-  "36": object;
-  "41": object;
-  "42": AgencyDisclosureData;
-  "42A": MultipleBrokersData;
-  "22k": OfferBundleData;
-};
+const AddendaToDataMap = {
+  "22K": {} as UtilityData,
+  "22J": {} as LeadData,
+  "22E": {} as FIRPTAData,
+  "17": {} as Addenda17Data,
+  "22A": {} as FinancingData,
+  "21": {} as PSAData,
+  "28": {} as PSAData,
+  "22D": {} as OptionalClausesData,
+  "35": {} as InspectionData,
+  "35E": {} as EscalationData,
+  "42": {} as AgencyDisclosureData,
+  "42A": {} as MultipleBrokersData,
+  "22T": {} as TitleData,
+  "22AD": {} as DownpaymentData,
+} as const;
 
 const OfferBundleSchema = new mongoose.Schema({
   userId: {

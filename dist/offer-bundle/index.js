@@ -3,8 +3,25 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.OfferBundleModel = exports.OfferBundleSchema = void 0;
+exports.AddendaToDataMap = exports.OfferBundleModel = exports.OfferBundleSchema = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
+const AddendaToDataMap = {
+    "22K": {},
+    "22J": {},
+    "22E": {},
+    "17": {},
+    "22A": {},
+    "21": {},
+    "28": {},
+    "22D": {},
+    "35": {},
+    "35E": {},
+    "42": {},
+    "42A": {},
+    "22T": {},
+    "22AD": {},
+};
+exports.AddendaToDataMap = AddendaToDataMap;
 const OfferBundleSchema = new mongoose_1.default.Schema({
     userId: {
         type: mongoose_1.default.Schema.Types.ObjectId,
@@ -51,11 +68,6 @@ const OfferBundleSchema = new mongoose_1.default.Schema({
             ref: "PSA",
             default: null,
         },
-        "27": {
-            type: mongoose_1.default.Schema.Types.ObjectId,
-            ref: "Addenda",
-            default: null,
-        },
         "28": {
             type: mongoose_1.default.Schema.Types.ObjectId,
             ref: "PSA",
@@ -66,34 +78,14 @@ const OfferBundleSchema = new mongoose_1.default.Schema({
             ref: "Addenda22D",
             default: null,
         },
-        "34": {
-            type: mongoose_1.default.Schema.Types.ObjectId,
-            ref: "Addenda",
-            default: null,
-        },
         "35": {
             type: mongoose_1.default.Schema.Types.ObjectId,
             ref: "Addenda35",
             default: null,
         },
-        "35W": {
-            type: mongoose_1.default.Schema.Types.ObjectId,
-            ref: "Addenda",
-            default: null,
-        },
         "35E": {
             type: mongoose_1.default.Schema.Types.ObjectId,
             ref: "Addenda35E",
-            default: null,
-        },
-        "36": {
-            type: mongoose_1.default.Schema.Types.ObjectId,
-            ref: "Addenda",
-            default: null,
-        },
-        "41": {
-            type: mongoose_1.default.Schema.Types.ObjectId,
-            ref: "Addenda",
             default: null,
         },
         "42": {
@@ -106,19 +98,9 @@ const OfferBundleSchema = new mongoose_1.default.Schema({
             ref: "Addenda42A",
             default: null,
         },
-        "22EF": {
-            type: mongoose_1.default.Schema.Types.ObjectId,
-            ref: "Addenda",
-            default: null,
-        },
         "22T": {
             type: mongoose_1.default.Schema.Types.ObjectId,
             ref: "Addenda22T",
-            default: null,
-        },
-        "22Y": {
-            type: mongoose_1.default.Schema.Types.ObjectId,
-            ref: "Addenda",
             default: null,
         },
         "22AD": {
