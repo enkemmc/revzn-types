@@ -9,4 +9,4 @@ export { RawTitleDocument, TitleFieldMap, TitleData, TitleDataSchema, Addenda22T
 export { InspectionDataSchema, Addenda35Model, Addenda35Document, InspectionFieldMap, RawInspectionDocument, InspectionData, } from "./35";
 export { EscalationSchema, EscalationDocument, Addenda35EModel, RawEscalationDocument, EscalationFieldMap, EscalationData, } from "./35E";
 export { AgencyDisclosureSchema, AgencyDisclosureDocument, Addenda42Model, AgencyDisclosureData, AgencyDisclosureFieldMap, RawAgencyDisclosureDocument, } from "./42";
-export { RawMultipleBrokersDocument, MultipleBrokersFieldMap, MultipleBrokersData, MultipleBrokersDocument, MultipleBrokersSchema, } from "./42A";
+export { RawMultipleBrokersDocument, MultipleBrokersFieldMap, MultipleBrokersData, MultipleBrokersDocument, MultipleBrokersSchema, Addenda42AModel, } from "./42A";

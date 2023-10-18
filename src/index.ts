@@ -121,4 +121,5 @@ export {
   MultipleBrokersData,
   MultipleBrokersDocument,
   MultipleBrokersSchema,
+  Addenda42AModel,
 } from "./addenda";
