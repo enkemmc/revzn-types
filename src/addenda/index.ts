@@ -2,7 +2,6 @@ export {
   Addenda17Data,
   SellerDisclosureDataSchema,
   SellerDisclosureDocument,
-  SellerDisclosureData,
   RawSellerDisclosureDocument,
 } from "./17";
 export {

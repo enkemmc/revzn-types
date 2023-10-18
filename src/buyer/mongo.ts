@@ -1,13 +1,12 @@
 import mongoose from "mongoose";
+import { OfferBundleData } from "../offer-bundle";
 
-type BuyerData = {
-  id: string;
-  version: number;
-  /** Each version of their offer that a Buyer has sent. */
-  offerBundles?: string[];
-  name: string;
-  /** This is how we determine if a bundle is from a new buyer, or a new version of a bundle that has already been uploaded from the same buyer. */
-  listingKey: string;
+type temp = mongoose.InferSchemaType<typeof BuyerSchema>;
+type BuyerData = Omit<temp, "offerBundles"> & {
+  offerBundles: OfferBundleData[];
+};
+type DehydratedBuyerData = Omit<temp, "offerBundles"> & {
+  offerBundles: string[];
 };
 
 const BuyerSchema = new mongoose.Schema({
@@ -25,4 +24,10 @@ const BuyerSchema = new mongoose.Schema({
 type BuyerDocument = BuyerData & mongoose.Document;
 const BuyerModel = mongoose.model<BuyerData>("Buyer", BuyerSchema);
 
-export { BuyerModel, BuyerData, BuyerSchema, BuyerDocument };
+export {
+  DehydratedBuyerData,
+  BuyerModel,
+  BuyerData,
+  BuyerSchema,
+  BuyerDocument,
+};

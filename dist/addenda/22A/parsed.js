@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Addenda22ASchema = void 0;
+exports.Addenda22AModel = exports.Addenda22ASchema = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 exports.Addenda22ASchema = new mongoose_1.default.Schema({
     pdfPath: { type: String, required: true },
@@ -34,4 +34,5 @@ exports.Addenda22ASchema = new mongoose_1.default.Schema({
         financingContingencyWaiverDays: String,
     },
 });
+exports.Addenda22AModel = mongoose_1.default.model("Addenda22A", exports.Addenda22ASchema);
 //# sourceMappingURL=parsed.js.map

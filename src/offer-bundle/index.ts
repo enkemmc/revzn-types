@@ -1,14 +1,45 @@
 import mongoose from "mongoose";
+import { AgentData } from "../agent";
+import { PSAData } from "../psa";
+import {
+  Addenda17Data,
+  AgencyDisclosureData,
+  EscalationData,
+  InspectionData,
+  MultipleBrokersData,
+} from "../addenda";
 
-export type OfferBundleData = {
+type temp = mongoose.InferSchemaType<typeof OfferBundleSchema>;
+type OfferBundleData = Omit<temp, "addenda" | "userId" | "psa"> & {
+  userId: AgentData;
+  psa: PSAData;
+  addenda: Record<string, object | null>;
+};
+
+type DehydratedOfferBundleData = Omit<temp, "addenda" | "userId" | "psa"> & {
   userId: string;
-  id?: string;
+  id?: string; // is this even used?
   psa: string;
-  addenda: Record<string, any>;
+  addenda: Record<string, object | null>;
   pdfPath: string;
 };
 
-export const OfferBundleSchema = new mongoose.Schema({
+type AddendaToDataMap = {
+  "17": Addenda17Data;
+  "21": PSAData;
+  "27": object;
+  "28": object;
+  "34": object;
+  "35": InspectionData;
+  "35E": EscalationData;
+  "36": object;
+  "41": object;
+  "42": AgencyDisclosureData;
+  "42A": MultipleBrokersData;
+  "22k": OfferBundleData;
+};
+
+const OfferBundleSchema = new mongoose.Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Agent",
@@ -132,9 +163,18 @@ export const OfferBundleSchema = new mongoose.Schema({
   },
 });
 
-export const OfferBundleModel = mongoose.model<OfferBundleData>(
+const OfferBundleModel = mongoose.model<OfferBundleData>(
   "OfferBundle",
   OfferBundleSchema
 );
 
-export type OfferBundleDocument = OfferBundleData & mongoose.Document;
+type OfferBundleDocument = OfferBundleData & mongoose.Document;
+
+export {
+  OfferBundleSchema,
+  OfferBundleModel,
+  OfferBundleDocument,
+  OfferBundleData,
+  DehydratedOfferBundleData,
+  AddendaToDataMap
+};

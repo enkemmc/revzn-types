@@ -1,16 +1,31 @@
-export { AgentData, AgentDocument, AgentSchema, AgentModel } from "./agent";
-export { BuyerData, BuyerSchema, BuyerDocument, BuyerModel } from "./buyer";
 export {
+  DehydratedAgentData,
+  AgentData,
+  AgentDocument,
+  AgentSchema,
+  AgentModel,
+} from "./agent";
+export {
+  DehydratedBuyerData,
+  BuyerData,
+  BuyerSchema,
+  BuyerDocument,
+  BuyerModel,
+} from "./buyer";
+export {
+  DehydratedListingData,
   ListingData,
   ListingSchema,
-  ListingDocument,
   ListingModel,
+  ListingDocument,
 } from "./listing";
 export {
-  OfferBundleData,
   OfferBundleSchema,
-  OfferBundleDocument,
   OfferBundleModel,
+  OfferBundleDocument,
+  OfferBundleData,
+  DehydratedOfferBundleData,
+  AddendaToDataMap,
 } from "./offer-bundle";
 export {
   PSAData,
@@ -36,7 +51,6 @@ export {
   Addenda17Data,
   SellerDisclosureDataSchema,
   SellerDisclosureDocument,
-  SellerDisclosureData,
   RawSellerDisclosureDocument,
   LoanApplication,
   FinancingContingency,

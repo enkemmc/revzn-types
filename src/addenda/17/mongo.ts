@@ -1,30 +1,7 @@
 import { FormCommonProps } from "../../common";
 import { Document, Schema } from "mongoose";
-
-/** Seller Disclosure data. */
-export type Addenda17Data = {
-  titleAuthorityToSell: boolean;
-  titleFirstRightOfRefusal: boolean;
-  titleOption: boolean;
-  titleLeaseOrRental: boolean;
-  titleLifeEstate: boolean;
-  titleEncroachments: boolean;
-  titlePrivateRoad: boolean;
-  titleRightOfWayEasements: boolean;
-  titleWrittenAgreements: boolean;
-  titleStudy: boolean;
-  titleAssessments: boolean;
-  titleZoningViolations: boolean;
-  sellerCount: boolean;
-  sellerState: boolean;
-  sellerCity: boolean;
-  sellerAddress: boolean;
-  seller2Name: boolean;
-  sellerZip: boolean;
-  seller1Name: boolean;
-  sellerOccupyingNo: boolean;
-  sellerOccupyingYes: boolean;
-};
+import { Addenda17Data } from ".";
+import mongoose from "mongoose";
 
 export type SellerDisclosureDocument = Document &
   Addenda17Data &
@@ -53,3 +30,8 @@ export const SellerDisclosureDataSchema = new Schema({
   sellerOccupyingNo: Boolean,
   sellerOccupyingYes: Boolean,
 });
+
+export const Addenda17Model = mongoose.model<SellerDisclosureDocument>(
+  "Addenda17",
+  SellerDisclosureDataSchema
+);

@@ -1,4 +1,5 @@
-export type SellerDisclosureData = {
+/** Seller Disclosure data. */
+export type Addenda17Data = {
   titleAuthorityToSell: boolean;
   titleFirstRightOfRefusal: boolean;
   titleOption: boolean;

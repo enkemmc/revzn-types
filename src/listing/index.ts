@@ -1,12 +1,16 @@
 import mongoose from "mongoose";
+import { BuyerData } from "../buyer";
 
-export type ListingData = {
-  id?: string;
-  streetAddress: string;
+type temp = mongoose.InferSchemaType<typeof ListingSchema>;
+type ListingData = Omit<temp, "buyers"> & {
+  buyers: BuyerData[];
+};
+
+type DehydratedListingData = Omit<temp, "buyers"> & {
   buyers: string[];
 };
 
-export const ListingSchema = new mongoose.Schema({
+const ListingSchema = new mongoose.Schema({
   streetAddress: { type: String, required: true },
   mlsNumber: { type: Number, required: true },
   buyers: [
@@ -17,5 +21,13 @@ export const ListingSchema = new mongoose.Schema({
   ],
 });
 
-export const ListingModel = mongoose.model<ListingData>("Listing", ListingSchema);
-export type ListingDocument = ListingData & mongoose.Document;
+const ListingModel = mongoose.model<ListingData>("Listing", ListingSchema);
+type ListingDocument = ListingData & mongoose.Document;
+
+export {
+  DehydratedListingData,
+  ListingData,
+  ListingSchema,
+  ListingModel,
+  ListingDocument,
+};

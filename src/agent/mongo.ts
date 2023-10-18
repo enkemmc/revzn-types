@@ -1,18 +1,26 @@
 import mongoose from "mongoose";
+import { ListingData } from "../listing";
 
-type AgentData = {
-  id?: string;
-  name?: string | null;
-  email: string;
-  password?: string;
-  image?: string | null;
-  primaryColor?: string;
-  secondaryColor?: string;
-  logoImage?: string | null;
-  isDeleted?: boolean;
-  socialId?: string;
-  loginType?: string;
-  token?: string;
+// type AgentData = {
+//   id?: string;
+//   name?: string | null;
+//   email: string;
+//   password?: string;
+//   image?: string | null;
+//   primaryColor?: string;
+//   secondaryColor?: string;
+//   logoImage?: string | null;
+//   isDeleted?: boolean;
+//   socialId?: string;
+//   loginType?: string;
+//   token?: string;
+//   listings: ListingData[];
+// };
+type temp = mongoose.InferSchemaType<typeof AgentSchema>;
+type AgentData = Omit<temp, "listings"> & {
+  listings: ListingData[];
+};
+type DehydratedAgentData = Omit<temp, "listings"> & {
   listings: string[];
 };
 
@@ -76,4 +84,10 @@ const AgentSchema = new mongoose.Schema(
 type AgentDocument = AgentData & mongoose.Document;
 const AgentModel = mongoose.model<AgentData>("Agent", AgentSchema);
 
-export { AgentData, AgentDocument, AgentSchema, AgentModel };
+export {
+  AgentData,
+  AgentDocument,
+  AgentSchema,
+  AgentModel,
+  DehydratedAgentData,
+};

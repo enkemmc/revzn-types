@@ -88,6 +88,9 @@ export declare const Addenda22ASchema: mongoose.Schema<any, mongoose.Model<any, 
 }> & {
     _id: mongoose.Types.ObjectId;
 }>;
+export declare const Addenda22AModel: mongoose.Model<Addenda22ADocument, {}, {}, {}, mongoose.Document<unknown, {}, Addenda22ADocument> & FinancingData & FormCommonProps & mongoose.Document<any, any, any> & {
+    _id: mongoose.Types.ObjectId;
+}, any>;
 export type Addenda22ADocument = IAddenda22A & mongoose.Document;
 export type FinancingData = {
     loanApplicationData: LoanApplicationData;
