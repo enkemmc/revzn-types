@@ -85,11 +85,6 @@ const OfferBundleSchema = new mongoose.Schema({
       ref: "PSA",
       default: null,
     },
-    "27": {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Addenda",
-      default: null,
-    },
     "28": {
       type: mongoose.Schema.Types.ObjectId,
       ref: "PSA",
@@ -100,34 +95,14 @@ const OfferBundleSchema = new mongoose.Schema({
       ref: "Addenda22D",
       default: null,
     },
-    "34": {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Addenda",
-      default: null,
-    },
     "35": {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Addenda35",
       default: null,
     },
-    "35W": {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Addenda",
-      default: null,
-    },
     "35E": {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Addenda35E",
-      default: null,
-    },
-    "36": {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Addenda",
-      default: null,
-    },
-    "41": {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Addenda",
       default: null,
     },
     "42": {
@@ -140,19 +115,9 @@ const OfferBundleSchema = new mongoose.Schema({
       ref: "Addenda42A",
       default: null,
     },
-    "22EF": {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Addenda",
-      default: null,
-    },
     "22T": {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Addenda22T",
-      default: null,
-    },
-    "22Y": {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Addenda",
       default: null,
     },
     "22AD": {
@@ -176,5 +141,5 @@ export {
   OfferBundleDocument,
   OfferBundleData,
   DehydratedOfferBundleData,
-  AddendaToDataMap
+  AddendaToDataMap,
 };
