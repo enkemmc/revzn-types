@@ -1,12 +1,11 @@
 import mongoose from "mongoose";
-type BuyerData = {
-    id: string;
-    version: number;
-    /** Each version of their offer that a Buyer has sent. */
-    offerBundles?: string[];
-    name: string;
-    /** This is how we determine if a bundle is from a new buyer, or a new version of a bundle that has already been uploaded from the same buyer. */
-    listingKey: string;
+import { OfferBundleData } from "../offer-bundle";
+type temp = mongoose.InferSchemaType<typeof BuyerSchema>;
+type BuyerData = Omit<temp, "offerBundles"> & {
+    offerBundles: OfferBundleData[];
+};
+type DehydratedBuyerData = Omit<temp, "offerBundles"> & {
+    offerBundles: string[];
 };
 declare const BuyerSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
     name: string;
@@ -27,7 +26,14 @@ declare const BuyerSchema: mongoose.Schema<any, mongoose.Model<any, any, any, an
     _id: mongoose.Types.ObjectId;
 }>;
 type BuyerDocument = BuyerData & mongoose.Document;
-declare const BuyerModel: mongoose.Model<BuyerData, {}, {}, {}, mongoose.Document<unknown, {}, BuyerData> & BuyerData & {
+declare const BuyerModel: mongoose.Model<BuyerData, {}, {}, {}, mongoose.Document<unknown, {}, BuyerData> & Omit<{
+    name: string;
+    version: number;
+    listingKey: string;
+    offerBundles: mongoose.Types.ObjectId[];
+}, "offerBundles"> & {
+    offerBundles: OfferBundleData[];
+} & {
     _id: mongoose.Types.ObjectId;
 }, any>;
-export { BuyerModel, BuyerData, BuyerSchema, BuyerDocument };
+export { DehydratedBuyerData, BuyerModel, BuyerData, BuyerSchema, BuyerDocument, };

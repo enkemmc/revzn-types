@@ -3,6 +3,7 @@ export {
   SellerDisclosureDataSchema,
   SellerDisclosureDocument,
   RawSellerDisclosureDocument,
+  Addenda17Model,
 } from "./17";
 export {
   LoanApplication,

@@ -2,9 +2,8 @@ import mongoose, { Document } from "mongoose";
 import { PSAData } from "./PSAData";
 export declare const PSASchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
     date: string;
-    mlsNumber: string;
     pdfPath: string;
-    addenda: string[][];
+    mlsNumber: string;
     offerExpirationDate: string;
     buyer: string[];
     seller: string[];
@@ -12,6 +11,7 @@ export declare const PSASchema: mongoose.Schema<any, mongoose.Model<any, any, an
     titleInsuranceCompany: string;
     closingAgentCompany: string;
     closingAgentIndividual: string;
+    addenda: string[][];
     buyerBrokerageCompensation: string;
     buyerBrokerageAmountInListing: string;
     buyerBrokeragePayOffered: boolean;
@@ -67,13 +67,13 @@ export declare const PSASchema: mongoose.Schema<any, mongoose.Model<any, any, an
     buyerAuthentisign?: {
         state: string;
         email: string;
-        streetAddress: string;
         city: string;
         zip: string;
         signatureOne: string;
         signatureDateOne: string;
         signatureTwo: string;
         signatureDateTwo: string;
+        streetAddress: string;
         phone: string;
         brokerageFirm: string;
         broker: string;
@@ -90,9 +90,8 @@ export declare const PSASchema: mongoose.Schema<any, mongoose.Model<any, any, an
     } | undefined;
 }, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
     date: string;
-    mlsNumber: string;
     pdfPath: string;
-    addenda: string[][];
+    mlsNumber: string;
     offerExpirationDate: string;
     buyer: string[];
     seller: string[];
@@ -100,6 +99,7 @@ export declare const PSASchema: mongoose.Schema<any, mongoose.Model<any, any, an
     titleInsuranceCompany: string;
     closingAgentCompany: string;
     closingAgentIndividual: string;
+    addenda: string[][];
     buyerBrokerageCompensation: string;
     buyerBrokerageAmountInListing: string;
     buyerBrokeragePayOffered: boolean;
@@ -155,13 +155,13 @@ export declare const PSASchema: mongoose.Schema<any, mongoose.Model<any, any, an
     buyerAuthentisign?: {
         state: string;
         email: string;
-        streetAddress: string;
         city: string;
         zip: string;
         signatureOne: string;
         signatureDateOne: string;
         signatureTwo: string;
         signatureDateTwo: string;
+        streetAddress: string;
         phone: string;
         brokerageFirm: string;
         broker: string;
@@ -178,9 +178,8 @@ export declare const PSASchema: mongoose.Schema<any, mongoose.Model<any, any, an
     } | undefined;
 }>> & mongoose.FlatRecord<{
     date: string;
-    mlsNumber: string;
     pdfPath: string;
-    addenda: string[][];
+    mlsNumber: string;
     offerExpirationDate: string;
     buyer: string[];
     seller: string[];
@@ -188,6 +187,7 @@ export declare const PSASchema: mongoose.Schema<any, mongoose.Model<any, any, an
     titleInsuranceCompany: string;
     closingAgentCompany: string;
     closingAgentIndividual: string;
+    addenda: string[][];
     buyerBrokerageCompensation: string;
     buyerBrokerageAmountInListing: string;
     buyerBrokeragePayOffered: boolean;
@@ -243,13 +243,13 @@ export declare const PSASchema: mongoose.Schema<any, mongoose.Model<any, any, an
     buyerAuthentisign?: {
         state: string;
         email: string;
-        streetAddress: string;
         city: string;
         zip: string;
         signatureOne: string;
         signatureDateOne: string;
         signatureTwo: string;
         signatureDateTwo: string;
+        streetAddress: string;
         phone: string;
         brokerageFirm: string;
         broker: string;

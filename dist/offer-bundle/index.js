@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.OfferBundleModel = exports.OfferBundleSchema = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
-exports.OfferBundleSchema = new mongoose_1.default.Schema({
+const OfferBundleSchema = new mongoose_1.default.Schema({
     userId: {
         type: mongoose_1.default.Schema.Types.ObjectId,
         ref: "Agent",
@@ -128,5 +128,7 @@ exports.OfferBundleSchema = new mongoose_1.default.Schema({
         },
     },
 });
-exports.OfferBundleModel = mongoose_1.default.model("OfferBundle", exports.OfferBundleSchema);
+exports.OfferBundleSchema = OfferBundleSchema;
+const OfferBundleModel = mongoose_1.default.model("OfferBundle", OfferBundleSchema);
+exports.OfferBundleModel = OfferBundleModel;
 //# sourceMappingURL=index.js.map

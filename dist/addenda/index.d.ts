@@ -1,4 +1,4 @@
-export { Addenda17Data, SellerDisclosureDataSchema, SellerDisclosureDocument, SellerDisclosureData, RawSellerDisclosureDocument, } from "./17";
+export { Addenda17Data, SellerDisclosureDataSchema, SellerDisclosureDocument, RawSellerDisclosureDocument, } from "./17";
 export { LoanApplication, FinancingContingency, RawFinancingDocument, FinancingContingencyData, IAddenda22A, Addenda22ADocument, Addenda22ASchema, FinancingData, LoanApplicationData, } from "./22A";
 export { DownpaymentDataSchema, Addenda22ADDocument, Addenda22ADModel, DownpaymentData, DownPaymentFieldMap, RawDownPaymentDocument, } from "./22AD";
 export { OptionalClausesData, OptionalClausesDataSchema, Addenda22DDocument, Addenda22DModel, OptionalClausesFieldMap, RawOptionalClausesDocument, } from "./22D";

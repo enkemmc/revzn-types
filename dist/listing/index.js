@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ListingModel = exports.ListingSchema = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
-exports.ListingSchema = new mongoose_1.default.Schema({
+const ListingSchema = new mongoose_1.default.Schema({
     streetAddress: { type: String, required: true },
     mlsNumber: { type: Number, required: true },
     buyers: [
@@ -15,5 +15,7 @@ exports.ListingSchema = new mongoose_1.default.Schema({
         },
     ],
 });
-exports.ListingModel = mongoose_1.default.model("Listing", exports.ListingSchema);
+exports.ListingSchema = ListingSchema;
+const ListingModel = mongoose_1.default.model("Listing", ListingSchema);
+exports.ListingModel = ListingModel;
 //# sourceMappingURL=index.js.map

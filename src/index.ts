@@ -49,6 +49,7 @@ export {
 // addenda
 export {
   Addenda17Data,
+  Addenda17Model,
   SellerDisclosureDataSchema,
   SellerDisclosureDocument,
   RawSellerDisclosureDocument,

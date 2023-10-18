@@ -1,17 +1,10 @@
 import mongoose from "mongoose";
-type AgentData = {
-    id?: string;
-    name?: string | null;
-    email: string;
-    password?: string;
-    image?: string | null;
-    primaryColor?: string;
-    secondaryColor?: string;
-    logoImage?: string | null;
-    isDeleted?: boolean;
-    socialId?: string;
-    loginType?: string;
-    token?: string;
+import { ListingData } from "../listing";
+type temp = mongoose.InferSchemaType<typeof AgentSchema>;
+type AgentData = Omit<temp, "listings"> & {
+    listings: ListingData[];
+};
+type DehydratedAgentData = Omit<temp, "listings"> & {
     listings: string[];
 };
 declare const AgentSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, {
@@ -68,7 +61,25 @@ declare const AgentSchema: mongoose.Schema<any, mongoose.Model<any, any, any, an
     _id: mongoose.Types.ObjectId;
 }>;
 type AgentDocument = AgentData & mongoose.Document;
-declare const AgentModel: mongoose.Model<AgentData, {}, {}, {}, mongoose.Document<unknown, {}, AgentData> & AgentData & {
+declare const AgentModel: mongoose.Model<AgentData, {}, {}, {}, mongoose.Document<unknown, {}, AgentData> & Omit<{
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
+    name: string;
+    image: string;
+    email: string;
+    logoImage: string;
+    isDeleted: boolean;
+    listings: mongoose.Types.ObjectId[];
+    token?: string | undefined;
+    password?: string | undefined;
+    primaryColor?: string | undefined;
+    secondaryColor?: string | undefined;
+    socialId?: string | undefined;
+    loginType?: string | undefined;
+}, "listings"> & {
+    listings: ListingData[];
+} & {
     _id: mongoose.Types.ObjectId;
 }, any>;
-export { AgentData, AgentDocument, AgentSchema, AgentModel };
+export { AgentData, AgentDocument, AgentSchema, AgentModel, DehydratedAgentData, };

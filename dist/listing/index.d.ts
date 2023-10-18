@@ -1,25 +1,35 @@
 import mongoose from "mongoose";
-export type ListingData = {
-    id?: string;
-    streetAddress: string;
+import { BuyerData } from "../buyer";
+type temp = mongoose.InferSchemaType<typeof ListingSchema>;
+type ListingData = Omit<temp, "buyers"> & {
+    buyers: BuyerData[];
+};
+type DehydratedListingData = Omit<temp, "buyers"> & {
     buyers: string[];
 };
-export declare const ListingSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
-    streetAddress: string;
+declare const ListingSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
     mlsNumber: number;
+    streetAddress: string;
     buyers: mongoose.Types.ObjectId[];
 }, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
-    streetAddress: string;
     mlsNumber: number;
+    streetAddress: string;
     buyers: mongoose.Types.ObjectId[];
 }>> & mongoose.FlatRecord<{
-    streetAddress: string;
     mlsNumber: number;
+    streetAddress: string;
     buyers: mongoose.Types.ObjectId[];
 }> & {
     _id: mongoose.Types.ObjectId;
 }>;
-export declare const ListingModel: mongoose.Model<ListingData, {}, {}, {}, mongoose.Document<unknown, {}, ListingData> & ListingData & {
+declare const ListingModel: mongoose.Model<ListingData, {}, {}, {}, mongoose.Document<unknown, {}, ListingData> & Omit<{
+    mlsNumber: number;
+    streetAddress: string;
+    buyers: mongoose.Types.ObjectId[];
+}, "buyers"> & {
+    buyers: BuyerData[];
+} & {
     _id: mongoose.Types.ObjectId;
 }, any>;
-export type ListingDocument = ListingData & mongoose.Document;
+type ListingDocument = ListingData & mongoose.Document;
+export { DehydratedListingData, ListingData, ListingSchema, ListingModel, ListingDocument, };

@@ -1,21 +1,6 @@
 import mongoose from "mongoose";
 import { ListingData } from "../listing";
 
-// type AgentData = {
-//   id?: string;
-//   name?: string | null;
-//   email: string;
-//   password?: string;
-//   image?: string | null;
-//   primaryColor?: string;
-//   secondaryColor?: string;
-//   logoImage?: string | null;
-//   isDeleted?: boolean;
-//   socialId?: string;
-//   loginType?: string;
-//   token?: string;
-//   listings: ListingData[];
-// };
 type temp = mongoose.InferSchemaType<typeof AgentSchema>;
 type AgentData = Omit<temp, "listings"> & {
   listings: ListingData[];

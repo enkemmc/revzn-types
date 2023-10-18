@@ -1,7 +1,11 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SellerDisclosureDataSchema = void 0;
+exports.Addenda17Model = exports.SellerDisclosureDataSchema = void 0;
 const mongoose_1 = require("mongoose");
+const mongoose_2 = __importDefault(require("mongoose"));
 exports.SellerDisclosureDataSchema = new mongoose_1.Schema({
     titleAuthorityToSell: Boolean,
     titleFirstRightOfRefusal: Boolean,
@@ -25,4 +29,5 @@ exports.SellerDisclosureDataSchema = new mongoose_1.Schema({
     sellerOccupyingNo: Boolean,
     sellerOccupyingYes: Boolean,
 });
+exports.Addenda17Model = mongoose_2.default.model("Addenda17", exports.SellerDisclosureDataSchema);
 //# sourceMappingURL=mongo.js.map
