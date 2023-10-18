@@ -10,4 +10,5 @@ export {
   Addenda22ASchema,
   FinancingData,
   LoanApplicationData,
+  Addenda22AModel,
 } from "./parsed";

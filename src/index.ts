@@ -48,6 +48,7 @@ export {
 
 // addenda
 export {
+  Addenda22AModel,
   Addenda17Data,
   Addenda17Model,
   SellerDisclosureDataSchema,

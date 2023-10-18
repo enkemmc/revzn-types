@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MultipleBrokersSchema = exports.MultipleBrokersFieldMap = exports.AgencyDisclosureFieldMap = exports.Addenda42Model = exports.AgencyDisclosureSchema = exports.EscalationFieldMap = exports.Addenda35EModel = exports.EscalationSchema = exports.InspectionFieldMap = exports.Addenda35Model = exports.InspectionDataSchema = exports.Addenda22TModel = exports.TitleDataSchema = exports.TitleFieldMap = exports.Addenda22KModel = exports.UtilitySchema = exports.LeadFieldMap = exports.Addenda22JModel = exports.LeadDataSchema = exports.FIRPTA = exports.Addenda22EModel = exports.FIRPTADataSchema = exports.OptionalClausesFieldMap = exports.Addenda22DModel = exports.OptionalClausesDataSchema = exports.DownPaymentFieldMap = exports.Addenda22ADModel = exports.DownpaymentDataSchema = exports.Addenda22ASchema = exports.FinancingContingency = exports.LoanApplication = exports.Addenda17Model = exports.SellerDisclosureDataSchema = void 0;
+exports.MultipleBrokersSchema = exports.MultipleBrokersFieldMap = exports.AgencyDisclosureFieldMap = exports.Addenda42Model = exports.AgencyDisclosureSchema = exports.EscalationFieldMap = exports.Addenda35EModel = exports.EscalationSchema = exports.InspectionFieldMap = exports.Addenda35Model = exports.InspectionDataSchema = exports.Addenda22TModel = exports.TitleDataSchema = exports.TitleFieldMap = exports.Addenda22KModel = exports.UtilitySchema = exports.LeadFieldMap = exports.Addenda22JModel = exports.LeadDataSchema = exports.FIRPTA = exports.Addenda22EModel = exports.FIRPTADataSchema = exports.OptionalClausesFieldMap = exports.Addenda22DModel = exports.OptionalClausesDataSchema = exports.DownPaymentFieldMap = exports.Addenda22ADModel = exports.DownpaymentDataSchema = exports.Addenda22AModel = exports.Addenda22ASchema = exports.FinancingContingency = exports.LoanApplication = exports.Addenda17Model = exports.SellerDisclosureDataSchema = void 0;
 var _17_1 = require("./17");
 Object.defineProperty(exports, "SellerDisclosureDataSchema", { enumerable: true, get: function () { return _17_1.SellerDisclosureDataSchema; } });
 Object.defineProperty(exports, "Addenda17Model", { enumerable: true, get: function () { return _17_1.Addenda17Model; } });
@@ -8,6 +8,7 @@ var _22A_1 = require("./22A");
 Object.defineProperty(exports, "LoanApplication", { enumerable: true, get: function () { return _22A_1.LoanApplication; } });
 Object.defineProperty(exports, "FinancingContingency", { enumerable: true, get: function () { return _22A_1.FinancingContingency; } });
 Object.defineProperty(exports, "Addenda22ASchema", { enumerable: true, get: function () { return _22A_1.Addenda22ASchema; } });
+Object.defineProperty(exports, "Addenda22AModel", { enumerable: true, get: function () { return _22A_1.Addenda22AModel; } });
 var _22AD_1 = require("./22AD");
 Object.defineProperty(exports, "DownpaymentDataSchema", { enumerable: true, get: function () { return _22AD_1.DownpaymentDataSchema; } });
 Object.defineProperty(exports, "Addenda22ADModel", { enumerable: true, get: function () { return _22AD_1.Addenda22ADModel; } });

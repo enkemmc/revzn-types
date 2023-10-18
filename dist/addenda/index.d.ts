@@ -1,5 +1,5 @@
 export { Addenda17Data, SellerDisclosureDataSchema, SellerDisclosureDocument, RawSellerDisclosureDocument, Addenda17Model, } from "./17";
-export { LoanApplication, FinancingContingency, RawFinancingDocument, FinancingContingencyData, IAddenda22A, Addenda22ADocument, Addenda22ASchema, FinancingData, LoanApplicationData, } from "./22A";
+export { LoanApplication, FinancingContingency, RawFinancingDocument, FinancingContingencyData, IAddenda22A, Addenda22ADocument, Addenda22ASchema, Addenda22AModel, FinancingData, LoanApplicationData, } from "./22A";
 export { DownpaymentDataSchema, Addenda22ADDocument, Addenda22ADModel, DownpaymentData, DownPaymentFieldMap, RawDownPaymentDocument, } from "./22AD";
 export { OptionalClausesData, OptionalClausesDataSchema, Addenda22DDocument, Addenda22DModel, OptionalClausesFieldMap, RawOptionalClausesDocument, } from "./22D";
 export { FIRPTADataSchema, Addenda22EModel, Addenda22EDocument, RawFirptaDocument, FIRPTAData, FIRPTA, } from "./22E";

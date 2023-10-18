@@ -13,6 +13,7 @@ export {
   IAddenda22A,
   Addenda22ADocument,
   Addenda22ASchema,
+  Addenda22AModel,
   FinancingData,
   LoanApplicationData,
 } from "./22A";
