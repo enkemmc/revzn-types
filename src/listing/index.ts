@@ -3,6 +3,7 @@ import { BuyerData } from "../buyer";
 
 type temp = mongoose.InferSchemaType<typeof ListingSchema>;
 type ListingData = Omit<temp, "buyers"> & {
+  _id: string;
   buyers: BuyerData[];
 };
 

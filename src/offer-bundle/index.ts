@@ -18,6 +18,7 @@ import {
 
 type temp = mongoose.InferSchemaType<typeof OfferBundleSchema>;
 type OfferBundleData = Omit<temp, "addenda" | "userId" | "psa"> & {
+  _id: string;
   userId: AgentData;
   psa: PSAData;
   addenda: Record<string, object | null>;

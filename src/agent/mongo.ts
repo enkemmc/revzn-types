@@ -3,6 +3,7 @@ import { ListingData } from "../listing";
 
 type temp = mongoose.InferSchemaType<typeof AgentSchema>;
 type AgentData = Omit<temp, "listings"> & {
+  _id: string;
   listings: ListingData[];
 };
 type DehydratedAgentData = Omit<temp, "listings"> & {

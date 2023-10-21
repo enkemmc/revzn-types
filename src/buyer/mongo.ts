@@ -3,6 +3,7 @@ import { OfferBundleData } from "../offer-bundle";
 
 type temp = mongoose.InferSchemaType<typeof BuyerSchema>;
 type BuyerData = Omit<temp, "offerBundles"> & {
+  _id: string;
   offerBundles: OfferBundleData[];
 };
 type DehydratedBuyerData = Omit<temp, "offerBundles"> & {
