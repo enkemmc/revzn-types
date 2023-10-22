@@ -5,16 +5,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Addenda22JModel = exports.LeadDataSchema = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
+/** A lot of these Strings are acknowledged via signatures, not checkboxes. */
 exports.LeadDataSchema = new mongoose_1.default.Schema({
     pdfPath: { type: String, required: true },
-    sellerKnownLead: String,
-    sellerNotKnownLead: String,
-    sellerProvidedToBuyer: String,
-    sellerHasNoReports: String,
+    sellerKnownLead: Boolean,
+    sellerNotKnownLead: Boolean,
+    sellerProvidedToBuyer: Boolean,
+    sellerHasNoReports: Boolean,
     sellerExplanationLead: String,
     sellerReportsExplanation: String,
-    buyerAcknowledgementWaived: String,
-    buyerAcknowledgementAccepted: String,
+    buyerAcknowledgementWaived: Boolean,
+    buyerAcknowledgementAccepted: Boolean,
     buyerAcknowledgementSatisfied: String,
     buyerAcknowledgementSellersOption: String,
     buyerAcknowledgementTermination: String,
