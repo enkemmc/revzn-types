@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import { OfferBundleData } from "../offer-bundle";
 type temp = mongoose.InferSchemaType<typeof BuyerSchema>;
 type BuyerData = Omit<temp, "offerBundles"> & {
+    _id: string;
     offerBundles: OfferBundleData[];
 };
 type DehydratedBuyerData = Omit<temp, "offerBundles"> & {
@@ -32,8 +33,9 @@ declare const BuyerModel: mongoose.Model<BuyerData, {}, {}, {}, mongoose.Documen
     listingKey: string;
     offerBundles: mongoose.Types.ObjectId[];
 }, "offerBundles"> & {
+    _id: string;
     offerBundles: OfferBundleData[];
-} & {
-    _id: mongoose.Types.ObjectId;
-}, any>;
+} & Required<{
+    _id: string;
+}>, any>;
 export { DehydratedBuyerData, BuyerModel, BuyerData, BuyerSchema, BuyerDocument, };

@@ -268,6 +268,6 @@ export declare const PSASchema: mongoose.Schema<any, mongoose.Model<any, any, an
     _id: mongoose.Types.ObjectId;
 }>;
 export type PSADocument = PSAData & Document;
-export declare const PSAModel: mongoose.Model<PSAData, {}, {}, {}, mongoose.Document<unknown, {}, PSAData> & PSAData & {
-    _id: mongoose.Types.ObjectId;
-}, any>;
+export declare const PSAModel: mongoose.Model<PSAData, {}, {}, {}, mongoose.Document<unknown, {}, PSAData> & PSAData & Required<{
+    _id: string;
+}>, any>;

@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import { ListingData } from "../listing";
 type temp = mongoose.InferSchemaType<typeof AgentSchema>;
 type AgentData = Omit<temp, "listings"> & {
+    _id: string;
     listings: ListingData[];
 };
 type DehydratedAgentData = Omit<temp, "listings"> & {
@@ -78,8 +79,9 @@ declare const AgentModel: mongoose.Model<AgentData, {}, {}, {}, mongoose.Documen
     socialId?: string | undefined;
     loginType?: string | undefined;
 }, "listings"> & {
+    _id: string;
     listings: ListingData[];
-} & {
-    _id: mongoose.Types.ObjectId;
-}, any>;
+} & Required<{
+    _id: string;
+}>, any>;
 export { AgentData, AgentDocument, AgentSchema, AgentModel, DehydratedAgentData, };

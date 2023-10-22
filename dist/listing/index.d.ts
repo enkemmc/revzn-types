@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import { BuyerData } from "../buyer";
 type temp = mongoose.InferSchemaType<typeof ListingSchema>;
 type ListingData = Omit<temp, "buyers"> & {
+    _id: string;
     buyers: BuyerData[];
 };
 type DehydratedListingData = Omit<temp, "buyers"> & {
@@ -27,9 +28,10 @@ declare const ListingModel: mongoose.Model<ListingData, {}, {}, {}, mongoose.Doc
     streetAddress: string;
     buyers: mongoose.Types.ObjectId[];
 }, "buyers"> & {
+    _id: string;
     buyers: BuyerData[];
-} & {
-    _id: mongoose.Types.ObjectId;
-}, any>;
+} & Required<{
+    _id: string;
+}>, any>;
 type ListingDocument = ListingData & mongoose.Document;
 export { DehydratedListingData, ListingData, ListingSchema, ListingModel, ListingDocument, };

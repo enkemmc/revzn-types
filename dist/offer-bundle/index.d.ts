@@ -4,6 +4,7 @@ import { PSAData } from "../psa";
 import { Addenda17Data, AgencyDisclosureData, DownpaymentData, EscalationData, FIRPTAData, FinancingData, InspectionData, LeadData, MultipleBrokersData, OptionalClausesData, TitleData, UtilityData } from "../addenda";
 type temp = mongoose.InferSchemaType<typeof OfferBundleSchema>;
 type OfferBundleData = Omit<temp, "addenda" | "userId" | "psa"> & {
+    _id: string;
     userId: AgentData;
     psa: PSAData;
     addenda: Record<string, object | null>;
@@ -115,11 +116,12 @@ declare const OfferBundleModel: mongoose.Model<OfferBundleData, {}, {}, {}, mong
         "22AD": mongoose.Types.ObjectId;
     } | undefined;
 }, "addenda" | "userId" | "psa"> & {
+    _id: string;
     userId: AgentData;
     psa: PSAData;
     addenda: Record<string, object | null>;
-} & {
-    _id: mongoose.Types.ObjectId;
-}, any>;
+} & Required<{
+    _id: string;
+}>, any>;
 type OfferBundleDocument = OfferBundleData & mongoose.Document;
 export { OfferBundleSchema, OfferBundleModel, OfferBundleDocument, OfferBundleData, DehydratedOfferBundleData, AddendaToDataMap, };
