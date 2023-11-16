@@ -32,7 +32,12 @@ declare const AddendaToDataMap: {
     readonly "22T": TitleData;
     readonly "22AD": DownpaymentData;
 };
-declare const OfferBundleSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
+declare const OfferBundleSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, {
+    timestamps: true;
+}, {
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
     pdfPath: string;
     userId: mongoose.Types.ObjectId;
     psa: mongoose.Types.ObjectId;
@@ -53,6 +58,9 @@ declare const OfferBundleSchema: mongoose.Schema<any, mongoose.Model<any, any, a
         "22AD": mongoose.Types.ObjectId;
     } | undefined;
 }, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
     pdfPath: string;
     userId: mongoose.Types.ObjectId;
     psa: mongoose.Types.ObjectId;
@@ -73,6 +81,9 @@ declare const OfferBundleSchema: mongoose.Schema<any, mongoose.Model<any, any, a
         "22AD": mongoose.Types.ObjectId;
     } | undefined;
 }>> & mongoose.FlatRecord<{
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
     pdfPath: string;
     userId: mongoose.Types.ObjectId;
     psa: mongoose.Types.ObjectId;
@@ -96,6 +107,9 @@ declare const OfferBundleSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     _id: mongoose.Types.ObjectId;
 }>;
 declare const OfferBundleModel: mongoose.Model<OfferBundleData, {}, {}, {}, mongoose.Document<unknown, {}, OfferBundleData> & Omit<{
+    createdAt: NativeDate;
+    updatedAt: NativeDate;
+} & {
     pdfPath: string;
     userId: mongoose.Types.ObjectId;
     psa: mongoose.Types.ObjectId;

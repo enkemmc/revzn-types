@@ -109,7 +109,7 @@ const OfferBundleSchema = new mongoose_1.default.Schema({
             default: null,
         },
     },
-});
+}, { timestamps: true });
 exports.OfferBundleSchema = OfferBundleSchema;
 const OfferBundleModel = mongoose_1.default.model("OfferBundle", OfferBundleSchema);
 exports.OfferBundleModel = OfferBundleModel;
