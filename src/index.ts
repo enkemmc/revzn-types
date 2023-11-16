@@ -45,6 +45,12 @@ export {
   DeepPartial,
   DeepNullable,
 } from "./common";
+export {
+  WhitelistDocument,
+  WhitelistModel,
+  WhitelistSchema,
+  WhitelistData,
+} from "./whitelisted/";
 
 // addenda
 export {

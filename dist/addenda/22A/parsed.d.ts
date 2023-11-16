@@ -93,6 +93,7 @@ export declare const Addenda22AModel: mongoose.Model<Addenda22ADocument, {}, {},
 }, any>;
 export type Addenda22ADocument = IAddenda22A & mongoose.Document;
 export type FinancingData = {
+    pdfPath?: string;
     loanApplicationData: LoanApplicationData;
     financingContingencyData: FinancingContingencyData;
 };
