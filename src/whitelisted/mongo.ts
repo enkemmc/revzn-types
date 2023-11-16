@@ -21,6 +21,9 @@ const WhitelistSchema = new mongoose.Schema({
 });
 
 type WhitelistDocument = WhitelistData & mongoose.Document;
-const WhitelistModel = mongoose.model<WhitelistData>("Agent", WhitelistSchema);
+const WhitelistModel = mongoose.model<WhitelistData>(
+  "Whitelist",
+  WhitelistSchema
+);
 
 export { WhitelistDocument, WhitelistModel, WhitelistSchema, WhitelistData };
