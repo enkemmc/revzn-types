@@ -19,6 +19,6 @@ const WhitelistSchema = new mongoose_1.default.Schema({
     },
 });
 exports.WhitelistSchema = WhitelistSchema;
-const WhitelistModel = mongoose_1.default.model("Agent", WhitelistSchema);
+const WhitelistModel = mongoose_1.default.model("Whitelist", WhitelistSchema);
 exports.WhitelistModel = WhitelistModel;
 //# sourceMappingURL=mongo.js.map

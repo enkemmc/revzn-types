@@ -9,6 +9,9 @@ type WhitelistData = temp & {
 const WhitelistSchema = new mongoose.Schema({
   email: {
     type: String,
+    required: [true, "Email is required"],
+    unique: true,
+    trim: true,
     lowercase: true,
     validate: {
       validator: (v: any) => {
@@ -16,7 +19,6 @@ const WhitelistSchema = new mongoose.Schema({
       },
       message: "Please enter a valid email",
     },
-    required: [true, "Email is required"],
   },
 });
 
