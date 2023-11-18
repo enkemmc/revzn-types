@@ -23,7 +23,7 @@ export enum BundleParseEventType {
 
 export interface IBundleFailed {
   status: BundleParseEventType.BUNDLE_FAILED;
-  message: string;
+  message: "Bundle parsing failed.";
   data: {
     bundleId: string;
   };
@@ -31,7 +31,7 @@ export interface IBundleFailed {
 
 export interface IBundleCompleted {
   status: BundleParseEventType.BUNDLE_COMPLETED;
-  message: string;
+  message: "Bundle parsing completed.";
   data: {
     bundleId: string;
   };
