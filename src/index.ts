@@ -139,5 +139,4 @@ export {
   IAddendaParsingFailed,
   IPsaParsingCompleted,
   IPsaParsingFailed,
-  SocketChannels,
 } from "./socket/";
