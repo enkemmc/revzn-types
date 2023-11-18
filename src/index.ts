@@ -132,10 +132,12 @@ export {
 export {
   IBundleParseEvent,
   BundleParseEventType,
+  IParsingAddenda,
   IParsingPSA,
   IFetchingPDF,
-  IParsingFailed,
-  IParsingAddenda,
-  IParsingCompleted,
+  IAddendaParsingCompleted,
+  IAddendaParsingFailed,
+  IPsaParsingCompleted,
+  IPsaParsingFailed,
   SocketChannels,
 } from "./socket/";

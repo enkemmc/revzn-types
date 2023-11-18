@@ -1,29 +1,54 @@
 export type IBundleParseEvent =
-  | IParsingFailed
+  | IPsaParsingFailed
+  | IPsaParsingCompleted
+  | IAddendaParsingFailed
+  | IAddendaParsingCompleted
   | IFetchingPDF
-  | IParsingAddenda
-  | IParsingCompleted
-  | IParsingPSA;
+  | IParsingPSA
+  | IParsingAddenda;
 
 export enum BundleParseEventType {
+  PSA_FAILED = "PSA_FAILED",
+  PSA_COMPLETED = "PSA_COMPLETED",
   FETCHING_PDF = "FETCHING_PDF",
   PARSING_PSA = "PARSING_PSA",
   PARSING_ADDENDA = "PARSING_ADDENDA",
-  FAILED = "FAILED",
-  COMPLETED = "COMPLETED",
+  ADDENDA_FAILED = "ADDENDA_FAILED",
+  ADDENDA_COMPLETED = "ADDENDA_COMPLETED",
+}
+
+export interface IPsaParsingFailed {
+  type: SocketChannels;
+  status: BundleParseEventType.PSA_FAILED;
+  message: string;
+  data?: never;
+}
+
+export interface IPsaParsingCompleted {
+  type: SocketChannels;
+  status: BundleParseEventType.PSA_COMPLETED;
+  message: "PSA parsing completed.";
+  data?: never;
+}
+
+export interface IAddendaParsingFailed {
+  type: SocketChannels;
+  status: BundleParseEventType.ADDENDA_FAILED;
+  message: string;
+  data?: never;
+}
+
+export interface IAddendaParsingCompleted {
+  type: SocketChannels;
+  status: BundleParseEventType.ADDENDA_COMPLETED;
+  message: "Addenda parsing completed.";
+  data?: never;
 }
 
 export interface IFetchingPDF {
   type: SocketChannels.PSA;
   status: BundleParseEventType.FETCHING_PDF;
   message: "Fetching PDF.";
-  data?: never;
-}
-
-export interface IParsingFailed {
-  type: SocketChannels;
-  status: BundleParseEventType.FAILED;
-  message: string;
   data?: never;
 }
 
@@ -38,13 +63,6 @@ export interface IParsingAddenda {
   type: SocketChannels.ADDENDA;
   status: BundleParseEventType.PARSING_ADDENDA;
   message: string;
-  data?: never;
-}
-
-export interface IParsingCompleted {
-  type: SocketChannels;
-  status: BundleParseEventType.COMPLETED;
-  message: "Parsing completed.";
   data?: never;
 }
 
