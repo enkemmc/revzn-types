@@ -11,39 +11,49 @@ export declare enum BundleParseEventType {
 export interface IPsaParsingFailed {
     status: BundleParseEventType.PSA_FAILED;
     message: string;
-    data?: never;
+    data: {
+        bundleId: string;
+    };
 }
 export interface IPsaParsingCompleted {
     status: BundleParseEventType.PSA_COMPLETED;
     message: "PSA parsing completed.";
-    data?: never;
+    data: {
+        bundleId: string;
+    };
 }
 export interface IAddendaParsingFailed {
     status: BundleParseEventType.ADDENDA_FAILED;
     message: string;
-    data?: never;
+    data: {
+        bundleId: string;
+    };
 }
 export interface IAddendaParsingCompleted {
     status: BundleParseEventType.ADDENDA_COMPLETED;
     message: "Addenda parsing completed.";
-    data?: never;
+    data: {
+        bundleId: string;
+    };
 }
 export interface IFetchingPDF {
     status: BundleParseEventType.FETCHING_PDF;
     message: "Fetching PDF.";
-    data?: never;
+    data: {
+        bundleId: string;
+    };
 }
 export interface IParsingPSA {
     status: BundleParseEventType.PARSING_PSA;
     message: "Parsing PSA.";
-    data?: never;
+    data: {
+        bundleId: string;
+    };
 }
 export interface IParsingAddenda {
     status: BundleParseEventType.PARSING_ADDENDA;
     message: string;
-    data?: never;
-}
-export declare enum SocketChannels {
-    PSA = "psa",
-    ADDENDA = "addenda"
+    data: {
+        bundleId: string;
+    };
 }

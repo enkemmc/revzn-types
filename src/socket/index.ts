@@ -5,9 +5,13 @@ export type IBundleParseEvent =
   | IAddendaParsingCompleted
   | IFetchingPDF
   | IParsingPSA
-  | IParsingAddenda;
+  | IParsingAddenda
+  | IBundleFailed
+  | IBundleCompleted;
 
 export enum BundleParseEventType {
+  BUNDLE_FAILED = "BUNDLE_FAILED",
+  BUNDLE_COMPLETED = "BUNDLE_COMPLETED",
   PSA_FAILED = "PSA_FAILED",
   PSA_COMPLETED = "PSA_COMPLETED",
   FETCHING_PDF = "FETCHING_PDF",
@@ -15,6 +19,22 @@ export enum BundleParseEventType {
   PARSING_ADDENDA = "PARSING_ADDENDA",
   ADDENDA_FAILED = "ADDENDA_FAILED",
   ADDENDA_COMPLETED = "ADDENDA_COMPLETED",
+}
+
+export interface IBundleFailed {
+  status: BundleParseEventType.BUNDLE_FAILED;
+  message: string;
+  data: {
+    bundleId: string;
+  };
+}
+
+export interface IBundleCompleted {
+  status: BundleParseEventType.BUNDLE_COMPLETED;
+  message: string;
+  data: {
+    bundleId: string;
+  };
 }
 
 export interface IPsaParsingFailed {

@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BundleParseEventType = exports.Addenda42AModel = exports.MultipleBrokersSchema = exports.MultipleBrokersFieldMap = exports.AgencyDisclosureFieldMap = exports.Addenda42Model = exports.AgencyDisclosureSchema = exports.EscalationFieldMap = exports.Addenda35EModel = exports.EscalationSchema = exports.InspectionFieldMap = exports.Addenda35Model = exports.InspectionDataSchema = exports.Addenda22TModel = exports.TitleDataSchema = exports.TitleFieldMap = exports.Addenda22KModel = exports.UtilitySchema = exports.LeadFieldMap = exports.Addenda22JModel = exports.LeadDataSchema = exports.FIRPTA = exports.Addenda22EModel = exports.FIRPTADataSchema = exports.OptionalClausesFieldMap = exports.Addenda22DModel = exports.OptionalClausesDataSchema = exports.DownPaymentFieldMap = exports.Addenda22ADModel = exports.DownpaymentDataSchema = exports.Addenda22ASchema = exports.FinancingContingency = exports.LoanApplication = exports.SellerDisclosureDataSchema = exports.Addenda17Model = exports.Addenda22AModel = exports.WhitelistSchema = exports.WhitelistModel = exports.PSAModel = exports.PSASchema = exports.AddendaFormType = exports.AddendaToDataMap = exports.OfferBundleModel = exports.OfferBundleSchema = exports.ListingModel = exports.ListingSchema = exports.BuyerModel = exports.BuyerSchema = exports.AgentModel = exports.AgentSchema = void 0;
-exports.SocketChannels = void 0;
 var agent_1 = require("./agent");
 Object.defineProperty(exports, "AgentSchema", { enumerable: true, get: function () { return agent_1.AgentSchema; } });
 Object.defineProperty(exports, "AgentModel", { enumerable: true, get: function () { return agent_1.AgentModel; } });
@@ -61,5 +60,4 @@ Object.defineProperty(exports, "MultipleBrokersSchema", { enumerable: true, get:
 Object.defineProperty(exports, "Addenda42AModel", { enumerable: true, get: function () { return addenda_1.Addenda42AModel; } });
 var socket_1 = require("./socket/");
 Object.defineProperty(exports, "BundleParseEventType", { enumerable: true, get: function () { return socket_1.BundleParseEventType; } });
-Object.defineProperty(exports, "SocketChannels", { enumerable: true, get: function () { return socket_1.SocketChannels; } });
 //# sourceMappingURL=index.js.map
