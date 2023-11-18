@@ -8,6 +8,9 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const WhitelistSchema = new mongoose_1.default.Schema({
     email: {
         type: String,
+        required: [true, "Email is required"],
+        unique: true,
+        trim: true,
         lowercase: true,
         validate: {
             validator: (v) => {
@@ -15,7 +18,6 @@ const WhitelistSchema = new mongoose_1.default.Schema({
             },
             message: "Please enter a valid email",
         },
-        required: [true, "Email is required"],
     },
 });
 exports.WhitelistSchema = WhitelistSchema;

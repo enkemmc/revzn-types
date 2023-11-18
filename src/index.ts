@@ -129,3 +129,13 @@ export {
   MultipleBrokersSchema,
   Addenda42AModel,
 } from "./addenda";
+export {
+  IBundleParseEvent,
+  BundleParseEventType,
+  IParsingPSA,
+  IFetchingPDF,
+  IParsingFailed,
+  IParsingAddenda,
+  IParsingCompleted,
+  SocketChannels,
+} from "./socket/";
