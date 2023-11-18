@@ -28,15 +28,29 @@ const AgentSchema = new mongoose_1.default.Schema({
         type: String,
         default: null,
     },
+    // Can we remove these?
     primaryColor: {
         type: String,
     },
     secondaryColor: {
         type: String,
     },
+    realEstateName: {
+        type: String,
+        default: "Real Estate Name",
+    },
+    brokerageName: {
+        type: String,
+        default: "Brokerage Name",
+    },
+    agentLogoImage: {
+        type: String,
+    },
+    brokerageLogoImage: {
+        type: String,
+    },
     logoImage: {
         type: String,
-        default: null,
     },
     isDeleted: {
         type: Boolean,

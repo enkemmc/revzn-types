@@ -2,10 +2,12 @@ import mongoose from "mongoose";
 import { ListingData } from "../listing";
 
 type temp = mongoose.InferSchemaType<typeof AgentSchema>;
+
 type AgentData = Omit<temp, "listings"> & {
   _id: string;
   listings: ListingData[];
 };
+
 type DehydratedAgentData = Omit<temp, "listings"> & {
   listings: string[];
 };
@@ -37,13 +39,11 @@ const AgentSchema = new mongoose.Schema(
     // Can we remove these?
     primaryColor: {
       type: String,
+      default: "#eaf4ae",
     },
     secondaryColor: {
       type: String,
-    },
-    realEstateName: {
-      type: String,
-      default: "Real Estate Name",
+      default: "#aa8ced",
     },
     brokerageName: {
       type: String,

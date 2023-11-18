@@ -17,13 +17,17 @@ declare const AgentSchema: mongoose.Schema<any, mongoose.Model<any, any, any, an
     name: string;
     image: string;
     email: string;
-    logoImage: string;
+    realEstateName: string;
+    brokerageName: string;
     isDeleted: boolean;
     listings: mongoose.Types.ObjectId[];
     token?: string | undefined;
     password?: string | undefined;
     primaryColor?: string | undefined;
     secondaryColor?: string | undefined;
+    agentLogoImage?: string | undefined;
+    brokerageLogoImage?: string | undefined;
+    logoImage?: string | undefined;
     socialId?: string | undefined;
     loginType?: string | undefined;
 }, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
@@ -33,13 +37,17 @@ declare const AgentSchema: mongoose.Schema<any, mongoose.Model<any, any, any, an
     name: string;
     image: string;
     email: string;
-    logoImage: string;
+    realEstateName: string;
+    brokerageName: string;
     isDeleted: boolean;
     listings: mongoose.Types.ObjectId[];
     token?: string | undefined;
     password?: string | undefined;
     primaryColor?: string | undefined;
     secondaryColor?: string | undefined;
+    agentLogoImage?: string | undefined;
+    brokerageLogoImage?: string | undefined;
+    logoImage?: string | undefined;
     socialId?: string | undefined;
     loginType?: string | undefined;
 }>> & mongoose.FlatRecord<{
@@ -49,13 +57,17 @@ declare const AgentSchema: mongoose.Schema<any, mongoose.Model<any, any, any, an
     name: string;
     image: string;
     email: string;
-    logoImage: string;
+    realEstateName: string;
+    brokerageName: string;
     isDeleted: boolean;
     listings: mongoose.Types.ObjectId[];
     token?: string | undefined;
     password?: string | undefined;
     primaryColor?: string | undefined;
     secondaryColor?: string | undefined;
+    agentLogoImage?: string | undefined;
+    brokerageLogoImage?: string | undefined;
+    logoImage?: string | undefined;
     socialId?: string | undefined;
     loginType?: string | undefined;
 }> & {
@@ -69,13 +81,17 @@ declare const AgentModel: mongoose.Model<AgentData, {}, {}, {}, mongoose.Documen
     name: string;
     image: string;
     email: string;
-    logoImage: string;
+    realEstateName: string;
+    brokerageName: string;
     isDeleted: boolean;
     listings: mongoose.Types.ObjectId[];
     token?: string | undefined;
     password?: string | undefined;
     primaryColor?: string | undefined;
     secondaryColor?: string | undefined;
+    agentLogoImage?: string | undefined;
+    brokerageLogoImage?: string | undefined;
+    logoImage?: string | undefined;
     socialId?: string | undefined;
     loginType?: string | undefined;
 }, "listings"> & {
