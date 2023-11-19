@@ -16,7 +16,7 @@ const AgentSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      default: null,
+      default: "Agent",
     },
     email: {
       type: String,
@@ -34,7 +34,11 @@ const AgentSchema = new mongoose.Schema(
     },
     image: {
       type: String,
-      default: null,
+      default: "https://www.revzn.com/default-user-pic.svg",
+    },
+    logoImage: {
+      type: String,
+      default: "https://www.revzn.com/REVZN.svg",
     },
     primaryColor: {
       type: String,
@@ -47,12 +51,6 @@ const AgentSchema = new mongoose.Schema(
     brokerageName: {
       type: String,
       default: "Brokerage Name",
-    },
-    agentLogoImage: {
-      type: String,
-    },
-    logoImage: {
-      type: String,
     },
     isDeleted: {
       type: Boolean,
