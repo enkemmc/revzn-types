@@ -31,13 +31,11 @@ const AgentSchema = new mongoose_1.default.Schema({
     // Can we remove these?
     primaryColor: {
         type: String,
+        default: "#eaf4ae",
     },
     secondaryColor: {
         type: String,
-    },
-    realEstateName: {
-        type: String,
-        default: "Real Estate Name",
+        default: "#aa8ced",
     },
     brokerageName: {
         type: String,
