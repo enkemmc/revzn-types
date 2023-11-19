@@ -25,7 +25,6 @@ declare const AgentSchema: mongoose.Schema<any, mongoose.Model<any, any, any, an
     token?: string | undefined;
     password?: string | undefined;
     agentLogoImage?: string | undefined;
-    brokerageLogoImage?: string | undefined;
     logoImage?: string | undefined;
     socialId?: string | undefined;
     loginType?: string | undefined;
@@ -44,7 +43,6 @@ declare const AgentSchema: mongoose.Schema<any, mongoose.Model<any, any, any, an
     token?: string | undefined;
     password?: string | undefined;
     agentLogoImage?: string | undefined;
-    brokerageLogoImage?: string | undefined;
     logoImage?: string | undefined;
     socialId?: string | undefined;
     loginType?: string | undefined;
@@ -63,7 +61,6 @@ declare const AgentSchema: mongoose.Schema<any, mongoose.Model<any, any, any, an
     token?: string | undefined;
     password?: string | undefined;
     agentLogoImage?: string | undefined;
-    brokerageLogoImage?: string | undefined;
     logoImage?: string | undefined;
     socialId?: string | undefined;
     loginType?: string | undefined;
@@ -86,7 +83,6 @@ declare const AgentModel: mongoose.Model<AgentData, {}, {}, {}, mongoose.Documen
     token?: string | undefined;
     password?: string | undefined;
     agentLogoImage?: string | undefined;
-    brokerageLogoImage?: string | undefined;
     logoImage?: string | undefined;
     socialId?: string | undefined;
     loginType?: string | undefined;

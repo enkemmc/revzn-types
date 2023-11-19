@@ -28,7 +28,6 @@ const AgentSchema = new mongoose_1.default.Schema({
         type: String,
         default: null,
     },
-    // Can we remove these?
     primaryColor: {
         type: String,
         default: "#eaf4ae",
@@ -42,9 +41,6 @@ const AgentSchema = new mongoose_1.default.Schema({
         default: "Brokerage Name",
     },
     agentLogoImage: {
-        type: String,
-    },
-    brokerageLogoImage: {
         type: String,
     },
     logoImage: {
