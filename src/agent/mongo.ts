@@ -40,6 +40,10 @@ const AgentSchema = new mongoose.Schema(
       type: String,
       default: "https://www.revzn.com/REVZN.svg",
     },
+    brokerageImage: {
+      type: String,
+      default: "https://www.revzn.com/default-brokerage-logo.png",
+    },
     primaryColor: {
       type: String,
       default: "#eaf4ae",
@@ -47,6 +51,10 @@ const AgentSchema = new mongoose.Schema(
     secondaryColor: {
       type: String,
       default: "#aa8ced",
+    },
+    agentCompany: {
+      type: String,
+      default: "Company Name",
     },
     brokerageName: {
       type: String,
