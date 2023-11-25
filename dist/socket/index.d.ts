@@ -12,14 +12,14 @@ export declare enum BundleParseEventType {
 }
 export interface IBundleFailed {
     status: BundleParseEventType.BUNDLE_FAILED;
-    message: "Bundle parsing failed.";
+    message: string;
     data: {
         bundleId: string;
     };
 }
 export interface IBundleCompleted {
     status: BundleParseEventType.BUNDLE_COMPLETED;
-    message: "Bundle parsing completed.";
+    message: string;
     data: {
         bundleId: string;
     };
@@ -33,7 +33,7 @@ export interface IPsaParsingFailed {
 }
 export interface IPsaParsingCompleted {
     status: BundleParseEventType.PSA_COMPLETED;
-    message: "PSA parsing completed.";
+    message: string;
     data: {
         bundleId: string;
     };
@@ -47,21 +47,21 @@ export interface IAddendaParsingFailed {
 }
 export interface IAddendaParsingCompleted {
     status: BundleParseEventType.ADDENDA_COMPLETED;
-    message: "Addenda parsing completed.";
+    message: string;
     data: {
         bundleId: string;
     };
 }
 export interface IFetchingPDF {
     status: BundleParseEventType.FETCHING_PDF;
-    message: "Fetching PDF.";
+    message: string;
     data: {
         bundleId: string;
     };
 }
 export interface IParsingPSA {
     status: BundleParseEventType.PARSING_PSA;
-    message: "Parsing PSA.";
+    message: string;
     data: {
         bundleId: string;
     };
