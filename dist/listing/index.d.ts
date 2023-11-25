@@ -8,24 +8,37 @@ type ListingData = Omit<temp, "buyers"> & {
 type DehydratedListingData = Omit<temp, "buyers"> & {
     buyers: string[];
 };
+declare enum ListingStatus {
+    Active = "active",
+    Pending = "pending",
+    Closed = "closed"
+}
 declare const ListingSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
+    status: ListingStatus;
     mlsNumber: number;
     streetAddress: string;
+    pendingCommission: number;
     buyers: mongoose.Types.ObjectId[];
 }, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
+    status: ListingStatus;
     mlsNumber: number;
     streetAddress: string;
+    pendingCommission: number;
     buyers: mongoose.Types.ObjectId[];
 }>> & mongoose.FlatRecord<{
+    status: ListingStatus;
     mlsNumber: number;
     streetAddress: string;
+    pendingCommission: number;
     buyers: mongoose.Types.ObjectId[];
 }> & {
     _id: mongoose.Types.ObjectId;
 }>;
 declare const ListingModel: mongoose.Model<ListingData, {}, {}, {}, mongoose.Document<unknown, {}, ListingData> & Omit<{
+    status: ListingStatus;
     mlsNumber: number;
     streetAddress: string;
+    pendingCommission: number;
     buyers: mongoose.Types.ObjectId[];
 }, "buyers"> & {
     _id: string;
@@ -34,4 +47,4 @@ declare const ListingModel: mongoose.Model<ListingData, {}, {}, {}, mongoose.Doc
     _id: string;
 }>, any>;
 type ListingDocument = ListingData & mongoose.Document;
-export { DehydratedListingData, ListingData, ListingSchema, ListingModel, ListingDocument, };
+export { DehydratedListingData, ListingStatus, ListingData, ListingSchema, ListingModel, ListingDocument, };

@@ -1,6 +1,6 @@
 export { DehydratedAgentData, AgentData, AgentDocument, AgentSchema, AgentModel, } from "./agent";
 export { DehydratedBuyerData, BuyerData, BuyerSchema, BuyerDocument, BuyerModel, } from "./buyer";
-export { DehydratedListingData, ListingData, ListingSchema, ListingModel, ListingDocument, } from "./listing";
+export { ListingStatus, DehydratedListingData, ListingData, ListingSchema, ListingModel, ListingDocument, } from "./listing";
 export { OfferBundleSchema, OfferBundleModel, OfferBundleDocument, OfferBundleData, DehydratedOfferBundleData, AddendaToDataMap, } from "./offer-bundle";
 export { PSAData, PSADocument, AddendaForms, AddendaFormTuple, AddendaFormType, PSASchema, PSAModel, } from "./psa";
 export { FormCommonProps, RawData, Axis, RowValue, Value, DeepPartial, DeepNullable, } from "./common";
