@@ -13,6 +13,7 @@ export {
   BuyerModel,
 } from "./buyer";
 export {
+  ListingStatus,
   DehydratedListingData,
   ListingData,
   ListingSchema,
