@@ -11,7 +11,7 @@ type DehydratedListingData = Omit<temp, "buyers"> & {
 declare enum ListingStatus {
     Active = "active",
     Pending = "pending",
-    Closed = "closed"
+    Sold = "sold"
 }
 declare const ListingSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
     status: ListingStatus;

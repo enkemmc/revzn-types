@@ -52,6 +52,12 @@ export {
   WhitelistSchema,
   WhitelistData,
 } from "./whitelisted/";
+export {
+  BetaSignupDocument,
+  BetaSignupModel,
+  BetaSignupSchema,
+  BetaSignupData,
+} from "./betasignup";
 
 // addenda
 export {

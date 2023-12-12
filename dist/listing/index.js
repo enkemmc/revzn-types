@@ -9,7 +9,7 @@ var ListingStatus;
 (function (ListingStatus) {
     ListingStatus["Active"] = "active";
     ListingStatus["Pending"] = "pending";
-    ListingStatus["Closed"] = "closed";
+    ListingStatus["Sold"] = "sold";
 })(ListingStatus || (exports.ListingStatus = ListingStatus = {}));
 const ListingSchema = new mongoose_1.default.Schema({
     streetAddress: { type: String, required: true },
