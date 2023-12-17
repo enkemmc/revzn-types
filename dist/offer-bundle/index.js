@@ -37,6 +37,11 @@ const OfferBundleSchema = new mongoose_1.default.Schema({
         ref: "PSA",
         default: null,
     },
+    version: {
+        type: Number,
+        required: true,
+        unique: true,
+    },
     addenda: {
         "22K": {
             type: mongoose_1.default.Schema.Types.ObjectId,

@@ -7,6 +7,7 @@ type OfferBundleData = Omit<temp, "addenda" | "userId" | "psa"> & {
     _id: string;
     userId: AgentData;
     psa: PSAData;
+    pdfPath: string;
     addenda: Record<string, object | null>;
 };
 type DehydratedOfferBundleData = Omit<temp, "addenda" | "userId" | "psa"> & {
@@ -38,6 +39,7 @@ declare const OfferBundleSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    version: number;
     pdfPath: string;
     userId: mongoose.Types.ObjectId;
     psa: mongoose.Types.ObjectId;
@@ -61,6 +63,7 @@ declare const OfferBundleSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    version: number;
     pdfPath: string;
     userId: mongoose.Types.ObjectId;
     psa: mongoose.Types.ObjectId;
@@ -84,6 +87,7 @@ declare const OfferBundleSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    version: number;
     pdfPath: string;
     userId: mongoose.Types.ObjectId;
     psa: mongoose.Types.ObjectId;
@@ -110,6 +114,7 @@ declare const OfferBundleModel: mongoose.Model<OfferBundleData, {}, {}, {}, mong
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    version: number;
     pdfPath: string;
     userId: mongoose.Types.ObjectId;
     psa: mongoose.Types.ObjectId;
@@ -133,6 +138,7 @@ declare const OfferBundleModel: mongoose.Model<OfferBundleData, {}, {}, {}, mong
     _id: string;
     userId: AgentData;
     psa: PSAData;
+    pdfPath: string;
     addenda: Record<string, object | null>;
 } & Required<{
     _id: string;

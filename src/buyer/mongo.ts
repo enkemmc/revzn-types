@@ -13,6 +13,7 @@ type DehydratedBuyerData = Omit<temp, "offerBundles"> & {
 const BuyerSchema = new mongoose.Schema({
   name: { type: String, required: true },
   listingKey: { type: String, required: true },
+  lastSelectedBundleIndex: { type: Number, required: true, default: 0 },
   version: { type: Number, default: 1 },
   offerBundles: [
     {
