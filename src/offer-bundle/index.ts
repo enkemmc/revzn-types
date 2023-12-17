@@ -21,6 +21,7 @@ type OfferBundleData = Omit<temp, "addenda" | "userId" | "psa"> & {
   _id: string;
   userId: AgentData;
   psa: PSAData;
+  pdfPath: string;
   addenda: Record<string, object | null>;
 };
 
@@ -64,6 +65,11 @@ const OfferBundleSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "PSA",
       default: null,
+    },
+    version: {
+      type: Number,
+      required: true,
+      unique: true,
     },
     addenda: {
       "22K": {
