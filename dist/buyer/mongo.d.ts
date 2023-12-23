@@ -12,16 +12,19 @@ declare const BuyerSchema: mongoose.Schema<any, mongoose.Model<any, any, any, an
     name: string;
     version: number;
     listingKey: string;
+    lastSelectedBundleIndex: number;
     offerBundles: mongoose.Types.ObjectId[];
 }, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
     name: string;
     version: number;
     listingKey: string;
+    lastSelectedBundleIndex: number;
     offerBundles: mongoose.Types.ObjectId[];
 }>> & mongoose.FlatRecord<{
     name: string;
     version: number;
     listingKey: string;
+    lastSelectedBundleIndex: number;
     offerBundles: mongoose.Types.ObjectId[];
 }> & {
     _id: mongoose.Types.ObjectId;
@@ -31,6 +34,7 @@ declare const BuyerModel: mongoose.Model<BuyerData, {}, {}, {}, mongoose.Documen
     name: string;
     version: number;
     listingKey: string;
+    lastSelectedBundleIndex: number;
     offerBundles: mongoose.Types.ObjectId[];
 }, "offerBundles"> & {
     _id: string;

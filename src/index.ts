@@ -147,3 +147,9 @@ export {
   IPsaParsingCompleted,
   IPsaParsingFailed,
 } from "./socket/";
+export {
+  UploadedFileModel,
+  UploadedFileType,
+  UploadedFileDocument,
+  UploadedFileData,
+} from "./uploaded-file";

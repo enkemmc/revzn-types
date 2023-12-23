@@ -8,6 +8,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 const BuyerSchema = new mongoose_1.default.Schema({
     name: { type: String, required: true },
     listingKey: { type: String, required: true },
+    lastSelectedBundleIndex: { type: Number, required: true, default: 0 },
     version: { type: Number, default: 1 },
     offerBundles: [
         {
