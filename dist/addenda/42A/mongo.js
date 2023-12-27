@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Addenda42AModel = exports.MultipleBrokersSchema = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const MultipleBrokersSchema = new mongoose_1.default.Schema({
-    pdfPath: {
+    pdfId: {
         type: String,
         required: true,
     },

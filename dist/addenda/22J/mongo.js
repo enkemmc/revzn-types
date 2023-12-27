@@ -7,7 +7,7 @@ exports.Addenda22JModel = exports.LeadDataSchema = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 /** A lot of these Strings are acknowledged via signatures, not checkboxes. */
 exports.LeadDataSchema = new mongoose_1.default.Schema({
-    pdfPath: { type: String, required: true },
+    pdfId: { type: String, required: true },
     sellerKnownLead: Boolean,
     sellerNotKnownLead: Boolean,
     sellerProvidedToBuyer: Boolean,

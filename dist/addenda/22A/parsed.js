@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Addenda22AModel = exports.Addenda22ASchema = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 exports.Addenda22ASchema = new mongoose_1.default.Schema({
-    pdfPath: { type: String, required: true },
+    pdfId: { type: String, required: true },
     loanApplicationData: {
         loanApplicationConventionalFirst: Boolean,
         loanApplicationConventionalSecond: Boolean,

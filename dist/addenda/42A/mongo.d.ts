@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { FormCommonProps } from "../../common";
 import { MultipleBrokersData } from "./parsed";
 declare const MultipleBrokersSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
-    pdfPath: string;
+    pdfId: string;
     addBuyerbrokerName: string;
     addBuyerbrokerMlsoffice: string;
     addBuyerbrokerMlslag: string;
@@ -24,7 +24,7 @@ declare const MultipleBrokersSchema: mongoose.Schema<any, mongoose.Model<any, an
     addListingbrokerName: string;
     addListingbroker2Mlslag: string;
 }, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
-    pdfPath: string;
+    pdfId: string;
     addBuyerbrokerName: string;
     addBuyerbrokerMlsoffice: string;
     addBuyerbrokerMlslag: string;
@@ -46,7 +46,7 @@ declare const MultipleBrokersSchema: mongoose.Schema<any, mongoose.Model<any, an
     addListingbrokerName: string;
     addListingbroker2Mlslag: string;
 }>> & mongoose.FlatRecord<{
-    pdfPath: string;
+    pdfId: string;
     addBuyerbrokerName: string;
     addBuyerbrokerMlsoffice: string;
     addBuyerbrokerMlslag: string;

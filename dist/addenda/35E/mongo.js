@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Addenda35EModel = exports.EscalationSchema = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const EscalationSchema = new mongoose_1.default.Schema({
-    pdfPath: {
+    pdfId: {
         type: String,
         required: true,
     },

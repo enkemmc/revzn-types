@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { FormCommonProps } from "../../common";
 import { EscalationData } from "./parsed";
 declare const EscalationSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
-    pdfPath: string;
+    pdfId: string;
     noticetobuyerSellersacceptanceCompetingofferbuyer: boolean;
     newpurchasepriceLesscredits: string;
     noticetobuyerSellersacceptanceNoticetosellerNotcompeting: boolean;
@@ -21,7 +21,7 @@ declare const EscalationSchema: mongoose.Schema<any, mongoose.Model<any, any, an
     newpurchasepricePluscredits: string;
     newpurchasepriceCompetingofferPluscredits: string;
 }, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
-    pdfPath: string;
+    pdfId: string;
     noticetobuyerSellersacceptanceCompetingofferbuyer: boolean;
     newpurchasepriceLesscredits: string;
     noticetobuyerSellersacceptanceNoticetosellerNotcompeting: boolean;
@@ -40,7 +40,7 @@ declare const EscalationSchema: mongoose.Schema<any, mongoose.Model<any, any, an
     newpurchasepricePluscredits: string;
     newpurchasepriceCompetingofferPluscredits: string;
 }>> & mongoose.FlatRecord<{
-    pdfPath: string;
+    pdfId: string;
     noticetobuyerSellersacceptanceCompetingofferbuyer: boolean;
     newpurchasepriceLesscredits: string;
     noticetobuyerSellersacceptanceNoticetosellerNotcompeting: boolean;

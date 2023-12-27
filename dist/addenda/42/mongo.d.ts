@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { AgencyDisclosureData } from "./parsed";
 import { FormCommonProps } from "../../common";
 declare const AgencyDisclosureSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
-    pdfPath: string;
+    pdfId: string;
     brokerrepresentsType: string;
     brokerrepresentsName: string;
     undersigned1Type: string;
@@ -18,7 +18,7 @@ declare const AgencyDisclosureSchema: mongoose.Schema<any, mongoose.Model<any, a
     undersigned3Type: string;
     brokerFirmName: string;
 }, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
-    pdfPath: string;
+    pdfId: string;
     brokerrepresentsType: string;
     brokerrepresentsName: string;
     undersigned1Type: string;
@@ -34,7 +34,7 @@ declare const AgencyDisclosureSchema: mongoose.Schema<any, mongoose.Model<any, a
     undersigned3Type: string;
     brokerFirmName: string;
 }>> & mongoose.FlatRecord<{
-    pdfPath: string;
+    pdfId: string;
     brokerrepresentsType: string;
     brokerrepresentsName: string;
     undersigned1Type: string;

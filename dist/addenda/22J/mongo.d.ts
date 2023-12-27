@@ -3,7 +3,7 @@ import { LeadData } from "./parsed";
 import { FormCommonProps } from "../../common";
 /** A lot of these Strings are acknowledged via signatures, not checkboxes. */
 export declare const LeadDataSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
-    pdfPath: string;
+    pdfId: string;
     sellerKnownLead?: boolean | undefined;
     sellerNotKnownLead?: boolean | undefined;
     sellerProvidedToBuyer?: boolean | undefined;
@@ -18,7 +18,7 @@ export declare const LeadDataSchema: mongoose.Schema<any, mongoose.Model<any, an
     buyerAcknowledgement?: string | undefined;
     buyerAcknowledgementReceivedPamphlet?: string | undefined;
 }, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
-    pdfPath: string;
+    pdfId: string;
     sellerKnownLead?: boolean | undefined;
     sellerNotKnownLead?: boolean | undefined;
     sellerProvidedToBuyer?: boolean | undefined;
@@ -33,7 +33,7 @@ export declare const LeadDataSchema: mongoose.Schema<any, mongoose.Model<any, an
     buyerAcknowledgement?: string | undefined;
     buyerAcknowledgementReceivedPamphlet?: string | undefined;
 }>> & mongoose.FlatRecord<{
-    pdfPath: string;
+    pdfId: string;
     sellerKnownLead?: boolean | undefined;
     sellerNotKnownLead?: boolean | undefined;
     sellerProvidedToBuyer?: boolean | undefined;
@@ -52,7 +52,7 @@ export declare const LeadDataSchema: mongoose.Schema<any, mongoose.Model<any, an
 }>;
 export type Addenda22JDocument = Document & LeadData & FormCommonProps;
 export declare const Addenda22JModel: mongoose.Model<Addenda22JDocument, {}, {}, {}, mongoose.Document<unknown, {}, Addenda22JDocument> & mongoose.Document<any, any, any> & {
-    pdfPath: string;
+    pdfId: string;
     sellerKnownLead?: boolean | undefined;
     sellerNotKnownLead?: boolean | undefined;
     sellerProvidedToBuyer?: boolean | undefined;

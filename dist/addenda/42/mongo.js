@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Addenda42Model = exports.AgencyDisclosureSchema = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const AgencyDisclosureSchema = new mongoose_1.default.Schema({
-    pdfPath: { type: String, required: true },
+    pdfId: { type: String, required: true },
     brokerrepresentsType: { type: String, default: null },
     brokerrepresentsName: { type: String, default: null },
     undersigned1Type: { type: String, default: null },

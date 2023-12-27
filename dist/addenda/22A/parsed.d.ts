@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { FormCommonProps } from "../../common";
 export type IAddenda22A = FinancingData & FormCommonProps;
 export declare const Addenda22ASchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
-    pdfPath: string;
+    pdfId: string;
     loanApplicationData?: {
         loanApplicationConventionalFirst?: boolean | undefined;
         loanApplicationConventionalSecond?: boolean | undefined;
@@ -30,7 +30,7 @@ export declare const Addenda22ASchema: mongoose.Schema<any, mongoose.Model<any, 
         financingContingencyWaiverDays?: string | undefined;
     } | undefined;
 }, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
-    pdfPath: string;
+    pdfId: string;
     loanApplicationData?: {
         loanApplicationConventionalFirst?: boolean | undefined;
         loanApplicationConventionalSecond?: boolean | undefined;
@@ -58,7 +58,7 @@ export declare const Addenda22ASchema: mongoose.Schema<any, mongoose.Model<any, 
         financingContingencyWaiverDays?: string | undefined;
     } | undefined;
 }>> & mongoose.FlatRecord<{
-    pdfPath: string;
+    pdfId: string;
     loanApplicationData?: {
         loanApplicationConventionalFirst?: boolean | undefined;
         loanApplicationConventionalSecond?: boolean | undefined;
@@ -93,7 +93,7 @@ export declare const Addenda22AModel: mongoose.Model<Addenda22ADocument, {}, {},
 }, any>;
 export type Addenda22ADocument = IAddenda22A & mongoose.Document;
 export type FinancingData = {
-    pdfPath?: string;
+    pdfId?: string;
     loanApplicationData: LoanApplicationData;
     financingContingencyData: FinancingContingencyData;
 };
