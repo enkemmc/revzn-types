@@ -26,7 +26,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PSAModel = exports.PSASchema = void 0;
 const mongoose_1 = __importStar(require("mongoose"));
 exports.PSASchema = new mongoose_1.Schema({
-    // pdfPath: { type: String, required: true },
     pdfId: { type: String, required: true },
     date: { type: String, required: true },
     mlsNumber: { type: String, required: true },

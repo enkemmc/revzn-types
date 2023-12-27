@@ -21,7 +21,7 @@ type OfferBundleData = Omit<temp, "addenda" | "userId" | "psa"> & {
   _id: string;
   userId: AgentData;
   psa: PSAData;
-  pdfPath: string;
+  pdfId: string;
   addenda: Record<string, object | null>;
 };
 
@@ -30,7 +30,7 @@ type DehydratedOfferBundleData = Omit<temp, "addenda" | "userId" | "psa"> & {
   id?: string; // is this even used?
   psa: string;
   addenda: Record<string, object | null>;
-  pdfPath: string;
+  pdfId: string;
 };
 
 const AddendaToDataMap = {
@@ -57,7 +57,7 @@ const OfferBundleSchema = new mongoose.Schema(
       ref: "Agent",
       required: true,
     },
-    pdfPath: {
+    pdfId: {
       type: String,
       required: true,
     },

@@ -7,7 +7,7 @@ type OfferBundleData = Omit<temp, "addenda" | "userId" | "psa"> & {
     _id: string;
     userId: AgentData;
     psa: PSAData;
-    pdfPath: string;
+    pdfId: string;
     addenda: Record<string, object | null>;
 };
 type DehydratedOfferBundleData = Omit<temp, "addenda" | "userId" | "psa"> & {
@@ -15,7 +15,7 @@ type DehydratedOfferBundleData = Omit<temp, "addenda" | "userId" | "psa"> & {
     id?: string;
     psa: string;
     addenda: Record<string, object | null>;
-    pdfPath: string;
+    pdfId: string;
 };
 declare const AddendaToDataMap: {
     readonly "22K": UtilityData;
@@ -40,7 +40,7 @@ declare const OfferBundleSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     updatedAt: NativeDate;
 } & {
     version: number;
-    pdfPath: string;
+    pdfId: string;
     userId: mongoose.Types.ObjectId;
     psa: mongoose.Types.ObjectId;
     addenda?: {
@@ -64,7 +64,7 @@ declare const OfferBundleSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     updatedAt: NativeDate;
 } & {
     version: number;
-    pdfPath: string;
+    pdfId: string;
     userId: mongoose.Types.ObjectId;
     psa: mongoose.Types.ObjectId;
     addenda?: {
@@ -88,7 +88,7 @@ declare const OfferBundleSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     updatedAt: NativeDate;
 } & {
     version: number;
-    pdfPath: string;
+    pdfId: string;
     userId: mongoose.Types.ObjectId;
     psa: mongoose.Types.ObjectId;
     addenda?: {
@@ -115,7 +115,7 @@ declare const OfferBundleModel: mongoose.Model<OfferBundleData, {}, {}, {}, mong
     updatedAt: NativeDate;
 } & {
     version: number;
-    pdfPath: string;
+    pdfId: string;
     userId: mongoose.Types.ObjectId;
     psa: mongoose.Types.ObjectId;
     addenda?: {
@@ -138,7 +138,7 @@ declare const OfferBundleModel: mongoose.Model<OfferBundleData, {}, {}, {}, mong
     _id: string;
     userId: AgentData;
     psa: PSAData;
-    pdfPath: string;
+    pdfId: string;
     addenda: Record<string, object | null>;
 } & Required<{
     _id: string;

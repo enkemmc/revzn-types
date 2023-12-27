@@ -28,7 +28,7 @@ const OfferBundleSchema = new mongoose_1.default.Schema({
         ref: "Agent",
         required: true,
     },
-    pdfPath: {
+    pdfId: {
         type: String,
         required: true,
     },
