@@ -3,7 +3,7 @@ import { AgencyDisclosureData } from "./parsed";
 import { FormCommonProps } from "../../common";
 
 const AgencyDisclosureSchema = new mongoose.Schema({
-  pdfPath: { type: String, required: true },
+  pdfId: { type: String, required: true },
   brokerrepresentsType: { type: String, default: null },
   brokerrepresentsName: { type: String, default: null },
   undersigned1Type: { type: String, default: null },
@@ -25,7 +25,7 @@ type AgencyDisclosureDocument = AgencyDisclosureData &
   FormCommonProps;
 const Addenda42Model = mongoose.model<AgencyDisclosureDocument>(
   "Addenda42",
-  AgencyDisclosureSchema,
+  AgencyDisclosureSchema
 );
 
 export { AgencyDisclosureSchema, AgencyDisclosureDocument, Addenda42Model };

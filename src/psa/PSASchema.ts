@@ -2,7 +2,8 @@ import mongoose, { Schema, Document } from "mongoose";
 import { PSAData } from "./PSAData";
 
 export const PSASchema = new Schema({
-  pdfPath: { type: String, required: true },
+  // pdfPath: { type: String, required: true },
+  pdfId: { type: String, required: true },
   date: { type: String, required: true },
   mlsNumber: { type: String, required: true },
   offerExpirationDate: { type: String, default: "" },

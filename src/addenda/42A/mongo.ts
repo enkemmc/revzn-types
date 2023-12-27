@@ -3,7 +3,7 @@ import { FormCommonProps } from "../../common";
 import { MultipleBrokersData } from "./parsed";
 
 const MultipleBrokersSchema = new mongoose.Schema({
-  pdfPath: {
+  pdfId: {
     type: String,
     required: true,
   },
@@ -34,7 +34,7 @@ type MultipleBrokersDocument = MultipleBrokersData &
   FormCommonProps;
 const Addenda42AModel = mongoose.model<MultipleBrokersDocument>(
   "Addenda42A",
-  MultipleBrokersSchema,
+  MultipleBrokersSchema
 );
 
 export { MultipleBrokersSchema, MultipleBrokersDocument, Addenda42AModel };

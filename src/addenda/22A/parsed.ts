@@ -5,7 +5,7 @@ import { FormCommonProps } from "../../common";
 export type IAddenda22A = FinancingData & FormCommonProps;
 
 export const Addenda22ASchema = new mongoose.Schema({
-  pdfPath: { type: String, required: true },
+  pdfId: { type: String, required: true },
   loanApplicationData: {
     loanApplicationConventionalFirst: Boolean,
     loanApplicationConventionalSecond: Boolean,
@@ -42,7 +42,7 @@ export const Addenda22AModel = mongoose.model<Addenda22ADocument>(
 export type Addenda22ADocument = IAddenda22A & mongoose.Document;
 
 export type FinancingData = {
-  pdfPath?: string;
+  pdfId?: string;
   loanApplicationData: LoanApplicationData;
   financingContingencyData: FinancingContingencyData;
 };

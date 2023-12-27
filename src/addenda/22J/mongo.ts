@@ -4,7 +4,7 @@ import { FormCommonProps } from "../../common";
 
 /** A lot of these Strings are acknowledged via signatures, not checkboxes. */
 export const LeadDataSchema = new mongoose.Schema({
-  pdfPath: { type: String, required: true },
+  pdfId: { type: String, required: true },
   sellerKnownLead: Boolean,
   sellerNotKnownLead: Boolean,
   sellerProvidedToBuyer: Boolean,

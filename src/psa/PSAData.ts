@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 /** Represents a parsed PSA document. */
 export type PSAData = {
   _id: string;
-  pdfPath: string;
+  pdfId: string;
   date: string;
   mlsNumber: string;
   offerExpirationDate: string;

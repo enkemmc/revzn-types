@@ -3,7 +3,7 @@ import { FormCommonProps } from "../../common";
 import { EscalationData } from "./parsed";
 
 const EscalationSchema = new mongoose.Schema({
-  pdfPath: {
+  pdfId: {
     type: String,
     required: true,
   },
@@ -80,6 +80,6 @@ const EscalationSchema = new mongoose.Schema({
 type EscalationDocument = EscalationData & mongoose.Document & FormCommonProps;
 const Addenda35EModel = mongoose.model<EscalationDocument>(
   "Addenda35E",
-  EscalationSchema,
+  EscalationSchema
 );
 export { EscalationSchema, EscalationDocument, Addenda35EModel };
